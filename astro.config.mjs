@@ -27,6 +27,7 @@ export default defineConfig({
 			components: {
 				PageTitle: './src/components/PageTitle.astro',
 				MarkdownContent: './src/components/MarkdownContent.astro',
+				SocialIcons: './src/components/SocialIcons.astro',
 			},
 			sidebar,
 		}),

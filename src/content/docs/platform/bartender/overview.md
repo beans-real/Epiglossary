@@ -92,9 +92,3 @@ the cloud file share. See [BarTender with Kinetic cloud and Linux](/platform/bar
 - [BarTender with Kinetic cloud and Linux](/platform/bartender/cloud-and-linux/): file share paths
   after the move to Linux containers
 - [Troubleshooting BarTender labels](/platform/bartender/troubleshooting/)
-
-## Further reading
-
-- [EpiUsers: How to print from Epicor using BarTender](https://www.epiusers.help/t/how-to-print-from-epicor-using-bartender/89143)
-- [EpiUsers: Insights 2024 REST API and BarTender](https://www.epiusers.help/t/insights-2024-rest-api-bartender/115692),
-  an alternative where BarTender pulls data from Epicor's REST API instead of reading trigger files

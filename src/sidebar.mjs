@@ -79,6 +79,7 @@ export const sidebar = [
 	{
 		label: 'Start Here',
 		items: [
+			{ label: 'How to use Epiglossary', slug: 'start/how-to-use' },
 			{ label: 'About Epiglossary', slug: 'start/about' },
 			{ label: 'Kinetic vs Classic', slug: 'start/kinetic-vs-classic' },
 		],

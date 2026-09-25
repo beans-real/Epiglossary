@@ -8,14 +8,13 @@ sidebar:
 
 A handful of places and tools that repay the time it takes to learn them. Everything here is public or
 available to any Epicor customer; nothing is an endorsement, and third-party tools are used at your own
-risk.
+risk. For the best community catalogues (EpiUsers' Experts' Corner, the Kinetic Control Compendium and
+the How-To series), see [How to use Epiglossary](/start/how-to-use/#the-best-catalogues-outside-epiglossary).
 
 ## Community
 
 - **[EpiUsers](https://www.epiusers.help/)**: the independent Epicor user forum. The first place to
   search for an error message or a "has anyone done…" question, with years of worked answers.
-- **[Genitive Indicis](https://www.epiusers.help/t/genitive-indicis-index/113923)**: an EpiUsers
-  thread that indexes the forum's best how-tos, shared function libraries and code snippets by topic.
 - **[Epicor Ideas](https://epicor.ideas.aha.io/ideas)**: Epicor's enhancement request portal. Search
   before posting and vote on existing ideas; votes are how requests get noticed.
 - **[The XY Problem](https://xyproblem.info/)**: a one-page read on asking about your real goal

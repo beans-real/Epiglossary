@@ -1,0 +1,24 @@
+---
+// Adds a "How to use" link to the header, ahead of Starlight's social icons.
+import Default from '@astrojs/starlight/components/SocialIcons.astro';
+
+const href = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/start/how-to-use/`;
+const current = Astro.url.pathname === href;
+---
+
+<a href={href} class="header-link" aria-current={current ? 'page' : undefined}>How to use</a>
+<Default />
+
+<style>
+	.header-link {
+		color: var(--sl-color-gray-2);
+		font-size: var(--sl-text-sm);
+		font-weight: 600;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+	.header-link:hover,
+	.header-link[aria-current='page'] {
+		color: var(--sl-color-text-accent);
+	}
+</style>

@@ -1,0 +1,110 @@
+---
+title: How to use Epiglossary
+description: The fastest way to find an answer here, what the badges and placeholders mean, and the best Epicor catalogues outside this wiki.
+sidebar:
+  order: 0
+---
+
+import { Steps, LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+Epiglossary is a map of Epicor built from real support and development work. It won't replace Epicor's documentation or the community forum. It's meant to get you to the right idea quickly, then point you at the places with more depth.
+
+## Find an answer in four moves
+
+<Steps>
+
+1. **Search first.** Press <kbd>Ctrl</kbd> + <kbd>K</kbd> (or <kbd>/</kbd>) anywhere. Search works best with the words Epicor itself uses:
+   - the **exact error text** from the message box
+   - a **business object or method**, such as `SalesOrder.Update` or `GetNewCustomer`
+   - a **table or field**, such as `PartTran`, `TranType` or `OrderRel`
+   - a **screen name**, such as `Customer Shipment Entry`
+
+2. **Check the badge.** Every article says which client it applies to:
+
+   | Badge | Meaning |
+   |---|---|
+   | **Kinetic** | The browser client and Application Studio |
+   | **Classic (E10)** | The Epicor 10 smart client, including customizations, `oTrans` and Event Wizard |
+   | **Kinetic + Classic** | Server-side or functional topics that behave the same in both, such as BPMs, Functions, BAQs, SSRS and the business processes |
+
+   If you're on Kinetic and land on a Classic page, look for the matching Kinetic page. [Migrating to Kinetic](/classic/migrating-to-kinetic/) maps each Classic technique to its Kinetic replacement.
+
+3. **Start at the overview.** Every area (BPM, BAQ, Scheduling and so on) opens with an **Overview** page that explains the concepts and links everything in the area. When you're new to an area, read that page before a how-to.
+
+4. **Use the troubleshooting page.** Most areas end with a **Troubleshooting** page in symptom → cause → fix form. Error messages are quoted exactly, so searching for the text of your error usually lands there.
+
+</Steps>
+
+## How to read a page
+
+- **Placeholders.** Examples use made-up values so they're safe to share: company `EPIC06`, custom prefix `XX_`, parts like `PART-1001`, and emails at `example.com`. Swap in your own values, and use your company's naming convention for anything you create.
+- **Test in a non-production environment first.** Every BPM, function and data change here should be tried in Pilot or Test before Live.
+- **Sources.** When a page was informed by a public thread or article, the **Sources** list at the bottom links to it. The original discussion often has more context, alternatives and follow-ups.
+- **Version notes.** Most pages hold across versions. Where behavior changed in a release, the page says so inline.
+
+## Where to go when Epiglossary doesn't have it
+
+<Steps>
+
+1. **Search EpiUsers.** Someone has very likely hit the same thing. Search for the error text or method name, and filter to the **Kinetic ERP** or **Epicor ERP 10** category.
+2. **Check Epicor's own help.** Press **F1** in Kinetic for field and screen help, or open the **Help & Support** panel. Customers can also search the **EpicCare** knowledge base and problem repository (PRBs) to see whether it's a known bug.
+3. **Trace it.** If you need to know *what Epicor is doing*, capture a trace and read the business object calls. See [Find the method a screen calls](/platform/bpm/finding-the-right-method/) and [Debugging](/kinetic/application-studio/debugging/).
+4. **Ask well.** When you post, describe the goal rather than only the fix you tried ([the XY problem](https://xyproblem.info/)). Include your version, the exact error and what you've already checked.
+
+</Steps>
+
+## The best catalogues outside Epiglossary
+
+These collections pay back the time it takes to learn them.
+
+### Community
+
+<CardGrid>
+	<LinkCard title="EpiUsers" href="https://www.epiusers.help/" description="The independent Epicor user forum, with tens of thousands of threads across Kinetic and Epicor 10. The first place to search." />
+	<LinkCard title="EpiUsers: Experts' Corner" href="https://www.epiusers.help/c/experts-corner" description="The forum's curated category of in-depth write-ups, tools and how-tos from experienced members." />
+	<LinkCard title="Kinetic Control Compendium" href="https://www.epiusers.help/t/kinetic-control-compendium/105887" description="A reference for every Application Studio component (Button, Combo, Date Picker, grids and more), with each property explained, one reply per component." />
+	<LinkCard title="Kinetic Code Camp" href="https://www.epiusers.help/t/kinetic-code-camp-bring-your-skills-or-lack-thereof/113349" description="A friendly, ongoing thread for learning C#, BPMs and Epicor customization, at any skill level." />
+</CardGrid>
+
+### The EpiUsers How-To series (Kinetic)
+
+Step-by-step write-ups from Experts' Corner that are still some of the best Application Studio material anywhere:
+
+| Topic | Thread |
+|---|---|
+| Grids | [Adding columns to an existing Kinetic grid](https://www.epiusers.help/t/how-to-adding-columns-to-existing-kinetic-grid/81377) · [Working with grid selectors](https://www.epiusers.help/t/how-to-kinetic-working-with-grid-selectors/98702) · [BAQ grid pub-sub](https://www.epiusers.help/t/how-to-kinetic-baq-grid-pub-sub/81650) |
+| Controls | [Making your own reusable combo](https://www.epiusers.help/t/how-to-making-your-own-reusable-combo/80736) · [Selectable list](https://www.epiusers.help/t/how-to-kinetic-selectable-list/83560) |
+| Dashboards | [Dashboard uplifts](https://www.epiusers.help/t/how-to-kinetic-dashboard-uplifts/104215) · [Dashboard charts](https://www.epiusers.help/t/how-to-dashboard-charts/104599) · [Updateable dashboards and method directives](https://www.epiusers.help/t/updateable-dashboards-and-method-directives/116278) |
+| Events and forms | [Launch a form using App Studio](https://www.epiusers.help/t/how-to-kinetic-launch-a-form-using-app-studio/81143) · [Upload a client file, parse it and show it in a grid](https://www.epiusers.help/t/how-to-kinetic-upload-a-client-file-parse-and-display-in-a-grid/100749) · [Row rule functions](https://www.epiusers.help/t/how-to-kinetic-row-rule-functions/83944) (older; check replies for newer approaches) |
+| Debugging | [Debugging Kinetic in the browser](https://www.epiusers.help/t/how-to-debugging-kinetic-browser/80926) |
+| Server side | [Epicor Functions: hello world](https://www.epiusers.help/t/epicor-functions-hello-world/67384) · [Dynamic parameters (variables in BAQs)](https://www.epiusers.help/t/dynamic-parameters-aka-adding-variables-to-baqs/99752) · [Server event log dashboard](https://www.epiusers.help/t/server-event-log-dashboard/97855) |
+
+### Official Epicor
+
+<CardGrid>
+	<LinkCard title="Epicor Learning Center" href="https://www.epicor.com/en-us/customers/epicor-learning/epicor-learning-center/" description="Epicor's course and video library, with learning paths by role. Customer login required." />
+	<LinkCard title="Epicor ERP video library" href="https://erpvideo.epicor.com/" description="Epicor's on-demand how-to videos." />
+	<LinkCard title="EpicCare" href="https://epiccare.epicor.com/" description="Epicor's support portal: cases, the knowledge base and the problem (PRB) repository. Customer login required." />
+	<LinkCard title="Epicor Ideas" href="https://epicor.ideas.aha.io/ideas" description="Where enhancement requests live now. Search, vote, then post." />
+</CardGrid>
+
+In the product itself, **F1** opens help for the current field or screen, and the **Help & Support** panel collects help articles, videos, guided tours and release notes.
+
+### Developer references
+
+<CardGrid>
+	<LinkCard title="Kinetic Trace Helper" href="https://www.epiusers.help/t/kinetic-trace-helper-utility-1-0-kinetic-web-chrome-extension/108390" description="A browser extension that shows the business object calls a Kinetic screen makes. The quickest way to find the method a BPM should hook." />
+	<LinkCard title="Epicor Trace Differ" href="https://github.com/jose-josh-do-dev/EpicorTraceDiffer" description="An open-source tool for comparing Epicor traces, to see exactly what changed between two runs of a screen." />
+	<LinkCard title="Kinetic events.json schema" href="https://gist.github.com/joshbooker/b0c646a79fe4bb062561cdc72b75a809" description="Schema documentation for Kinetic event definitions: triggers, actions and parameters. Useful when an event's JSON is easier to read than the designer." />
+	<LinkCard title="GingerHelp knowledge base" href="https://www.gingerhelp.com/knowledgebase-epicor-erp" description="Readable articles on Epicor development, including an orientation to Kinetic for developers." />
+</CardGrid>
+
+More utilities, such as dotPeek, SSMS and barcode tools, are listed in [Tools and links](/reference/tools-and-links/).
+
+## Help improve Epiglossary
+
+Every page has an **Edit page** link at the bottom that opens it on GitHub. Corrections, missing gotchas and better examples are welcome. The [style guide](https://github.com/beans-real/Epiglossary/blob/main/STYLE_GUIDE.md) covers the house rules: write in your own words, use placeholder data, and credit your sources.
+
+:::note
+Epiglossary is an independent community project. It is not affiliated with, endorsed by, or supported by Epicor Software Corporation.
+:::
