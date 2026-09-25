@@ -25,10 +25,8 @@ leaves three options:
 | Option | Notes |
 |---|---|
 | **Use a v1 URL** | Simplest. No API key needed. `https://<server>/<instance>/api/v1/BaqSvc/<BAQ ID>/` |
-| **Put the key in the v2 URL** | `…/api/v2/odata/<Company>/BaqSvc/<BAQ ID>/Data?api-key=<key>`. Works, but the key is saved in the workbook in plain text. Use a key limited by an access scope to the BAQs involved. |
+| **Put the key in the v2 URL** | `…/api/v2/odata/<Company>/BaqSvc/<BAQ ID>/Data?api-key=<key>`. Typically works, but the key is saved in the workbook in plain text. Use a key limited by an access scope to the BAQs involved. |
 | **Turn off the v2 key requirement** | Epicor documents a server setting (`EnforceApiKeyForRestApiV2`) for this. It affects every v2 caller, so it's an administrator's decision, and not something you can change on Epicor-hosted environments yourself. |
-
-<!-- TODO verify: whether the api-key query parameter is accepted by Excel's OData connector without errors for v2 BAQ feeds -->
 
 ## Steps
 
@@ -47,8 +45,6 @@ leaves three options:
 
 From then on, **Data > Refresh All** (or right-click the table and choose **Refresh**) re-runs the BAQ.
 
-<!-- TODO screenshot: Excel's From OData Feed dialog with a BAQ URL pasted in -->
-
 ## Tips
 
 - **Keep a list of URLs per environment.** Test and production have different hosts, so each workbook
@@ -57,7 +53,6 @@ From then on, **Data > Refresh All** (or right-click the table and choose **Refr
   BAQ parameters keeps refreshes fast.
 - **Watch the row limit.** If a feed stops at exactly 100 rows, the server's default row limit is
   applying. Ask your administrator about the limit, or narrow the BAQ so it returns fewer rows.
-  <!-- TODO verify: whether $top can raise the row count above the server's DefaultMaxRowCount for BAQ feeds -->
 - **Use a read-only account.** Credentials are stored with the workbook's connection on each user's
   machine. Give people an account that can run the BAQs but not change data, or use their own logins.
 - **Pivot tables and charts** can sit on top of the loaded table and refresh with it.

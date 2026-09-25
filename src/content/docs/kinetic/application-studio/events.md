@@ -40,8 +40,6 @@ The Events sidebar groups events by trigger type. The ones you'll use most:
 | **Event** | **Before**, **After**, **Override** | An existing event ID | Adding to or replacing system behavior |
 | **Window** | load hooks | The form | Running something as the form loads (for example `Form_OnLoad`) |
 
-<!-- TODO verify: exact Hook names offered for the Window trigger type (the canvas labels seen include "Window onLoad" and "Form_OnLoad") -->
-
 The sidebar groups these as **Component** (Control, Grid, Page, Tree, Window), **Data** (DataTable, DataView, EpBinding), **General** (Event) and **User Defined Actions** (no trigger).
 
 :::tip[Drive events from data, not controls]

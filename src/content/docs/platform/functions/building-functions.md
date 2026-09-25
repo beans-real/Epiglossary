@@ -31,8 +31,6 @@ almost every custom code function.
 7. Save. Fix anything listed in the error list; a function can be saved while **Disabled** if you
    need to park it with compile errors.
 
-<!-- TODO screenshot: the Kinetic Function Editor for a custom code function, showing the code area and the error list -->
-
 ## The signature
 
 The signature is the function's contract with its callers.

@@ -45,7 +45,6 @@ private void SalesOrderForm_BeforeToolClick(object sender, Ice.Lib.Framework.Bef
 Tool keys vary between forms. **New** on a line is often a form-specific key such as `EpiAddNewnewLine`, and some screens use short keys like `Refresh` or `Clear`. To find the key, temporarily add `MessageBox.Show(args.Tool.Key);` to the handler and click the tool. Comparing with `args.Tool.Key.ToUpper()` saves you from case differences.
 :::
 
-<!-- TODO verify: list of common tool keys (SaveTool, ClearTool, RefreshTool, DeleteTool) across 10.2 forms -->
 
 ## Adding an item to the Actions menu
 

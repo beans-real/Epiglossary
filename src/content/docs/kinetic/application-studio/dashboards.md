@@ -29,8 +29,6 @@ Build it by hand rather than with the classic-dashboard conversion. Converted da
 2. Click **+** (top right), choose type **Dashboard** and enter an ID such as `XX_OpenOrders`. Kinetic adds the dashboard prefix for you.
 3. In the **Application Map**, select the main page and set its **Name** and **Caption**. The caption is the title users see.
 
-<!-- TODO screenshot: the new-application dialog with Type Dashboard selected and an XX_ ID entered -->
-
 ## 2. Add and bind the grid
 
 1. Select the main page and click **Edit**.

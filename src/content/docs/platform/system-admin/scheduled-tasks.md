@@ -78,8 +78,6 @@ Monday mornings".
 If a task you deleted keeps coming back, or blocks you from scheduling the same report again, see
 [Troubleshooting](/platform/system-admin/troubleshooting/#a-deleted-scheduled-task-is-still-in-the-system).
 
-<!-- TODO screenshot: System Monitor with the Scheduled Tasks tab selected (no instance name in the title bar) -->
-
 ## Restart the task agent
 
 Restart the task agent when scheduled tasks stop starting, tasks sit in **Active Tasks** without

@@ -58,11 +58,6 @@ turns on debug mode (used in the pre-load debugging event on the [Debugging](/ki
 
 reads a column from the first row (index 0) of a data view, whichever row is current. Epicor's own system events use this pattern. Look for `#_trans.dataView(...)` in a trace.
 
-<!-- TODO verify: dataRow(n) takes a zero-based row position -->
-
-<!-- TODO verify: which widget fields evaluate bare JavaScript without #_..._#, and which treat their content as text unless wrapped -->
-<!-- TODO screenshot: a row-update column whose Expression uses #_..._# JavaScript -->
-
 :::caution
 `#_..._#` runs arbitrary JavaScript in the user's browser, against framework objects that Epicor can change between releases. Keep it short, prefer the built-in widgets when they can do the job, and retest these expressions after upgrades.
 :::
@@ -76,8 +71,6 @@ Expression text goes through one round of unescaping before it runs. In practice
 ```
 
 Here `"\\n"` reaches JavaScript as `"\n"` (a newline). A single backslash may not survive the unescaping round.
-
-<!-- TODO verify: backslash handling inside regex literals (/.../) in row-update expressions -->
 
 ## Dates
 

@@ -155,4 +155,9 @@ an API key is tied to that access scope, the key can call only what the scope al
   code widgets.
 
 Libraries can also be packaged with **Solution Workbench**, which publishes them as it installs.
-<!-- TODO verify: current Solution Workbench limits for function libraries (older releases allowed one library per solution and prevented demoting installed libraries) -->
+
+:::note
+Solution Workbench's limits for function libraries have changed between releases. Older ones allowed
+only one library per solution and prevented demoting an installed library. Check the behavior on
+your version.
+:::

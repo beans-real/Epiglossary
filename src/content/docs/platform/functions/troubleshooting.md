@@ -141,7 +141,11 @@ The log ID becomes the file name (`XX_CreditReview.log`), written to the user's 
 server. Epicor also provides a builder for fully customised logs and one for Azure Application
 Insights. Remove or quieten logging once the problem is solved; several busy logs writing to the same
 place slow the server and interleave their lines.
-<!-- TODO verify: where application log files can be read on Epicor-hosted cloud environments -->
+
+:::note
+Where you can read these log files differs between on-premises servers and Epicor-hosted cloud
+environments.
+:::
 
 ### Debug Mode and dumped sources
 

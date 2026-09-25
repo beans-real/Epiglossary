@@ -62,7 +62,6 @@ In **Data Views**, add a view, e.g. `XX_EditRows`, with **Server Schema** `BAQ` 
    ![Save event canvas: a Control onClick trigger followed by two erp-baq widgets, with the trigger Type Control, Hook On Click and Target set to the save tool](/images/dad7e956c01d4e92d1df1dc6e38eedfd151d0a20-2-690x336.png)
 
 2. Add an `erp-baq` widget: **BAQ Id** your uBAQ, **View Name** `XX_EditRows`, **Mode** `update`. Under **BAQ Update Options**, set **Operation** to `update`. The same panel has **Send All Rows** and **Rollback Data On Error**. Test with your uBAQ to see which behavior you need.
-   <!-- TODO verify: exact effect of Send All Rows and Rollback Data On Error -->
 
    ![erp-baq BAQ Update Options with Operation update, Send All Rows ticked and Rollback Data On Error unticked](/images/88946872915ac4ed1b3c09af79c4a4ffb43e073f.png)
 
@@ -98,4 +97,6 @@ Older releases don't have the `update` mode on `erp-baq`. Use `rest-erp` to call
 
 Those parameter path and name values are fixed. The call fails with anything else. Follow it with an `erp-baq` in `get` mode to refresh, as above.
 
-<!-- TODO verify: the exact release where erp-baq gained update mode (2022.2 per the source thread) -->
+:::note
+The 2022.2 cut-off comes from community reports. If your `erp-baq` **Mode** list has no `update`, use this approach whatever your release.
+:::

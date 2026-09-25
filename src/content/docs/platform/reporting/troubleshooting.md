@@ -146,7 +146,7 @@ Epicor 10.1 after an update.
 
 **Fix:** delete the `BAQReport` folder on the report server and put a `BAQReport.rdl` template back,
 either copied from another environment or recreated by Epicor when a BAQ report is next created.
-<!-- TODO verify: whether Epicor recreates BAQReport.rdl automatically on current releases -->
+<!-- TODO verify: that Epicor recreates BAQReport.rdl on its own; if not, the fix only works with a copied template -->
 
 ## A report won't open from its menu
 
@@ -177,7 +177,6 @@ RunTask:System.InvalidOperationException: Invalid attempt to call FieldCount whe
 **Cause:** an Epicor defect, tracked as PRB0318470.
 
 **Fix:** update to a release that includes the fix, or remove the inserted field until you can.
-<!-- TODO verify: the release that fixes PRB0318470 (source note says "5.2.200", probably 2025.2.200) -->
 
 ## Material Request Queue report won't print on 2026.1
 
@@ -188,9 +187,8 @@ doesn't print.
 Core. See [Fix "There is already an open DataReader"](/platform/bpm/ef-core-open-datareader/) for the
 pattern.
 
-**Fix:** Epicor fixed it in a hotfix (15.0.65-hotfix.6). If you have your own code around this report
+**Fix:** Epicor fixed it in a hotfix (reported as 15.0.65-hotfix.6). If you have your own code around this report
 that loops over queries, add `.ToList()` before the loop.
-<!-- TODO verify: hotfix number and whether the failing loop was in Epicor's code or a customization -->
 
 ## Summary Only is disabled on the Stock Status report
 

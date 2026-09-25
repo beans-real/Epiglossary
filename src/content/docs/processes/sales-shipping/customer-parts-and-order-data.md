@@ -59,8 +59,6 @@ the name with something like "DO NOT USE") or a BPM that hides it from ship-to l
 ([Filter and extend list results](/platform/bpm/customize-list-results/)). Epicor announced an
 **Inactive** option for ship-to records for Kinetic 2023.2; if your version has it, use that.
 
-<!-- TODO verify: that the ship-to Inactive flag shipped in 2023.2 and how it behaves in order entry. -->
-
 ## "Invalid Prc Con Num" when changing an order
 
 **Symptom:** saving a change to an existing sales order fails with an *Invalid Prc Con Num* error.
@@ -71,8 +69,6 @@ fails on every save.
 **Fix:** Epicor Support provides a data fix for this, `FX_Upd_OrderHed_ShpConNum_to0`, which (as its name
 says) resets the ship-to contact number on the order header to zero. Request it through a support case
 rather than editing the table yourself, then pick the correct contact on the order again.
-
-<!-- TODO verify: the exact error text, and which contact field (PrcConNum or ShpConNum) is invalid in the typical case. -->
 
 ## Related pages
 

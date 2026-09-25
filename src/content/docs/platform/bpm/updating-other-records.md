@@ -84,7 +84,6 @@ Some values aren't tracked the way you might expect. Epicor's change log, for in
 *after* a record is created but not the value it was created with, so the first entry for a job's
 production quantity only appears on its first change. And emailing on every change quickly becomes
 noise.
-<!-- TODO verify: where the change log is configured in current versions, to link to it from here -->
 
 A dependable alternative is to write your own history row to a UD table (`UD01` to `UD40`) each time
 the value changes, then report on it with a BAQ. Create UD rows through the UD business object so
@@ -106,8 +105,6 @@ using (var udSvc = Ice.Assemblies.ServiceRenderer.GetService<Ice.Contracts.UD01S
     udSvc.Update(ref uds);
 }
 ```
-
-<!-- TODO verify: compile this snippet on a current version; the directive needs a reference to the UD01 contract assembly -->
 
 The UD key fields together must be unique, so include something like a timestamp in one of them.
 Custom code that calls a service needs a reference to that service's contract assembly, added in the

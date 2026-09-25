@@ -24,8 +24,6 @@ For a worked example that takes a dashboard from build to production, see
 4. In the target environment, open **Solution Workbench** and **install** the file.
 5. Test in the target, including logging in as a normal user.
 
-<!-- TODO screenshot: Solution Workbench with a solution open and its element list -->
-
 ## Rules to know
 
 ### You can't go backwards in version

@@ -45,7 +45,7 @@ private bool ReportQty(string jobNum, int asmSeq, int oprSeq, decimal qty)
 }
 ```
 
-<!-- TODO verify: meaning of the two string arguments to oTrans.GetNewReportQty on the RQForm transaction (they are passed as "-1" to reset) -->
+
 
 - Writing `JobNum` first matters: the form validates the job and defaults other fields as each column changes, just as with typing.
 - Show errors. An empty `catch {}` makes failed reports look like successes, and on the shop floor nobody finds out until the job is short.

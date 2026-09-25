@@ -53,8 +53,6 @@ production job as a material.
      but you lose the job-by-job link.
 6. Let MRP create the feeder jobs from the demand, and handle only exceptions by hand.
 
-<!-- TODO verify: the exact name of the operation setting that makes employees report time as quantity (the note calls it "Time and Quantity" entry). -->
-
 ### Grouped vs individual feeder jobs
 
 | | One group job per month (per activity) | One feeder job per part |

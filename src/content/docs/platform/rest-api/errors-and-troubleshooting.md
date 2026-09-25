@@ -60,7 +60,6 @@ Log the whole body in your integration, not just the status code.
 The request has no `x-api-key` header or `api-key` parameter, the key was generated in a different
 environment, it has expired, or it's disabled. Generate a key in the environment you're calling. See
 [Authentication, API keys and integration accounts](/platform/rest-api/authentication/#api-keys-v2).
-<!-- TODO verify: the exact status code and message returned when the v2 API key is missing or invalid -->
 
 ### It works in the help page but not from code
 

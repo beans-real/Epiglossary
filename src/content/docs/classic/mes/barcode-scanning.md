@@ -79,7 +79,6 @@ Give **Start Production Activity** a customization and a menu item (`XX_STARTPRO
 2. Write each value into the form's data view columns, in the same order a user would enter them (job first, so the form can validate it and default the rest).
 3. Trigger the form's **OK**/submit button (for example with `PerformClick()` on the button you get by EpiGuid).
 
-<!-- TODO verify: data view and column names on the classic Start Production Activity form, and whether writing JobNum directly fires the same validation as typing it -->
 
 If your process needs anything else at start (resource, setup vs production), either encode it too or stop short of submitting and let the operator finish.
 

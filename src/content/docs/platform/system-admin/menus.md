@@ -54,7 +54,9 @@ by giving it its Kinetic application (the same ID as the Classic program, for ex
 
 ![Menu Maintenance showing the Custom Processes folder and its menu items](/images/menu-custom-processes-2.png)
 
-<!-- TODO verify: whether the Kinetic Enabled check box also needs ticking on these items -->
+:::note
+Depending on your release, these items may also need **Kinetic Enabled** ticked before they open in the browser client.
+:::
 
 ## After changing menus
 

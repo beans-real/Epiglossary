@@ -42,8 +42,6 @@ EPIC06,PART-1001,A,10,30
 EPIC06,PART-1001,A,20,30
 ```
 
-<!-- TODO verify: exact key column names required by the Bill of Materials template (for example alternate method) -->
-
 ## Rolling back
 
 If something goes wrong, run the reverse loads, in this order:

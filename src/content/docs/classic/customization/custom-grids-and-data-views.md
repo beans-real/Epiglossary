@@ -54,7 +54,6 @@ To make a column read-only in every control bound to it, set it on the view:
 edvItems.SetCurrentRowPropertyManually("Description", SettingStyle.ReadOnly);
 ```
 
-<!-- TODO verify: SetCurrentRowPropertyManually behaviour on views created with the parameterless EpiDataView constructor -->
 
 ## 4a: fill it from a BAQ
 

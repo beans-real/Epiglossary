@@ -92,8 +92,6 @@ A grid doesn't have to use a BAQ. The provider model can call a service method i
 
 The parameter names must match the method's. Look at the method's request in the browser's Network tab to see what it expects. Many base screens use this for their own grids, so it's also useful for reading how an existing grid gets its data.
 
-<!-- TODO verify: which provider model fields (Svc, Svc Path, Table Name, Out Param Name) must be set for a service-backed grid -->
-
 ## Hide the New and Delete buttons
 
 Those buttons come from the grid's data view, not the grid. See [Remove the New button from a panel card grid](/kinetic/application-studio/layout-and-controls/#remove-the-new-button-from-a-panel-card-grid).

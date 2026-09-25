@@ -117,7 +117,7 @@ Variations:
   must follow the new resource, read the resource's (or resource group's) burden settings and set the
   rate yourself. A percentage burden type means the labor rate times the percentage; a flat type means
   the rate as entered.
-  <!-- TODO verify: whether Labor.Update recalculates BurdenRate when ResourceID is changed in pre-processing -->
+  <!-- TODO verify: does Labor.Update recalculate BurdenRate when ResourceID changes in pre-processing? -->
 
 Make sure the rest of your shop-floor reporting agrees. If a third-party terminal system expects its own
 resource on the labor record, remapping in Epicor can break that system's reports. Often the cleaner
@@ -130,9 +130,7 @@ quantity on, to the next operation or to stock. If your shop doesn't use move re
 clutter the material queue.
 
 1. Create a pre-processing directive on `Erp.BO.Labor.Update`.
-2. Add **Set Field**: set `LaborDtl.RequestMove` of **all rows** to `false`.
-
-<!-- TODO verify: exact field name of the Request Move flag on LaborDtl -->
+2. Add **Set Field**: set `LaborDtl.RequestMove` (check the exact field name in your version) of **all rows** to `false`.
 
 If some resources should always move their output automatically, configure that on the resource rather
 than relying on operators ticking the box.

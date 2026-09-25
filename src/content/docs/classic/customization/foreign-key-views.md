@@ -57,5 +57,3 @@ Add text boxes (or a grid) with the ToolBox and set their **EpiBinding** to the 
 ## Doing it in code
 
 The same thing can be done from the Script Editor with `csm.AddForeignKeyView(...)`, which registers a view backed by an adapter's dataset, and `csm.NotifyForeignKeyView(...)` after you refill it. That's mainly useful when you load the related data yourself with an adapter call. For a fully custom table behind a grid, see [Custom grids and data views](/classic/customization/custom-grids-and-data-views/).
-
-<!-- TODO screenshot: Tools > Data Tools menu item in the Customization Tools Dialog (existing capture shows a personal layer name) -->

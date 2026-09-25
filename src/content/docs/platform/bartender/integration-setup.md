@@ -45,7 +45,6 @@ too.
 
 4. Add the action that runs the command script in the file's `%BTW%` header, so BarTender opens the
    template and prints to the printer named in the file.
-   <!-- TODO verify: exact name of the Integration Builder action that processes a Commander-style %BTW% script in BarTender 2019+ -->
 5. Set **actions after detection** so a printed file is never picked up again:
    - Action: **Move file** to the processed folder.
    - New extension: something like `printed`.
@@ -54,8 +53,6 @@ too.
    - Action: **Rename file**, with a new extension such as `failed`.
    - Again, append a timestamp.
 7. Save and deploy the integration, and check that its service is running.
-
-<!-- TODO screenshot: Integration Builder detection options for a *.bt file integration, with a neutral folder path -->
 
 ## What you get
 

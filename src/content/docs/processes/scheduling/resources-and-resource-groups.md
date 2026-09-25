@@ -49,8 +49,6 @@ To find and fix them:
 A BAQ on `JobOpDtl` where both `ResourceGrpID` and `ResourceID` are filled (and the same on `PartOpDtl`)
 finds every affected operation at once.
 
-<!-- TODO verify: JobOpDtl/PartOpDtl column names for the scheduling resource group and resource. -->
-
 ## Setup and production on different calendars
 
 Setup is often done by a small team of setters working a normal week, while machines run production

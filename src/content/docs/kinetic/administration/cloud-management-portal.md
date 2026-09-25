@@ -38,8 +38,6 @@ Choose **More Details** on an instance (or pick it from **Tenant Instance**) to 
 can give instances friendly names with **Change Instance Name**, which helps when several people manage
 several environments.
 
-<!-- TODO screenshot: Tenant Instance Summary tab with the site and task agent buttons (no tenant names or URLs visible) -->
-
 ## Summary tab: links and site actions
 
 The **Summary** tab gathers the details you otherwise hunt for:

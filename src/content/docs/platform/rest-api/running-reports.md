@@ -31,8 +31,6 @@ Create a BAQ, for example `XX_ReportOutput`, on `Ice.SysRptLst`:
 - Criteria: limit to the API user's own rows, and if you can, to the marker described below
 - Sort: newest first
 
-<!-- TODO verify: the SysRptLst creation date/time and description field names to recommend here -->
-
 ## Example (Python)
 
 This runs the WIP report for a date range and reads it as CSV. It reuses the `session` and `odata()`
@@ -78,7 +76,6 @@ for row in csv.DictReader(report_bytes.decode("utf-8").splitlines()):
 Parameter names differ for every report. Open the report service in the REST help page, call
 `GetDefaults` there, and look at the parameter table it returns (here `WIPParam`) to see what you can
 set.
-<!-- TODO verify: whether GetDefaults is available on every Erp.RPT service or some only offer GetNewParameters -->
 
 ## Finding the right output reliably
 
@@ -88,8 +85,7 @@ time. For anything busier, tag the run:
 - Put a unique value (a GUID) in the parameter row's `TaskNote` before calling `RunDirect`.
 - Filter the BAQ on the report list's `RptNote` for that value (make it a BAQ parameter).
 
-That finds exactly your run's output, however many other reports are being printed.
-<!-- TODO verify: that TaskNote set on a RunDirect call is copied to SysRptLst.RptNote (confirmed for SubmitToAgent in function code) -->
+That should find exactly your run's output, however many other reports are being printed.
 
 ## Things to know
 

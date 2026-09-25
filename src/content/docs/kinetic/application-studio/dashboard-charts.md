@@ -65,8 +65,6 @@ OutURL = "https://image-charts.com/chart"
 
 `cht` is the chart type, `chs` the size, `chd` the data series and `chl` the labels. The chart service's documentation (linked below) lists many more options: axes, legends, colors. Some chart types label their axes with different parameters than a pie chart does.
 
-<!-- TODO verify: that chl renders labels for bar chart types as well as pie, or whether bar charts need chxl/chxt -->
-
 ### 4. The event
 
 Create an event on the button's **On Click** with:
@@ -122,5 +120,3 @@ The Data Discovery widgets have reportedly been removed from Application Studio 
 A publisher bound to a grid's view publishes the selected row's value, so there's no way to get back to "all". Publishing from a separate field (for example a `CallContextBpmData` column you set with `row-update`) avoids that.
 
 ![Dashboard in preview with a Sales Rep Code filter, a customer grid and the Data Discovery pie chart of customers by state](/images/5e630584429f29964f14cbee38eae9a78f2a295d.gif)
-
-<!-- TODO verify: current availability of the Data Discovery chart widget in Application Studio by release -->

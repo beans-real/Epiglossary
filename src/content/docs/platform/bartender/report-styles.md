@@ -29,8 +29,6 @@ printing to BarTender. This page covers the two paths a style needs and how the 
 7. Save, then print one label from the report's own screen and check that a `.bt` file appears in the
    output folder.
 
-<!-- TODO screenshot: Report Style Maintenance detail for a Bartender Labels style, with Report Location and Output Location filled in with placeholder paths -->
-
 ## Keep the folders separate
 
 Use three distinct locations, and don't nest one inside another:

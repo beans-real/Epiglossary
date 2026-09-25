@@ -38,17 +38,11 @@ If a client is set up for **Epicor Identity Provider (IdP)** sign-in and you nee
 2. Change its value from the identity-provider mode to `Basic`. The value is case sensitive.
 3. Save and restart the client.
 
-<!-- TODO verify: exact tag name and the IdP value to replace (the source notes only say "IdentityProvider" to "Basic") -->
-
 The server has to allow Basic sign-in for the environment as well; this only changes what the client asks for.
 
 ## Classic or Kinetic forms
 
-From the Kinetic releases onwards, the same desktop client can open programs either as Classic forms or as their Kinetic (web-style) versions. Which one users get is controlled centrally in **Kinetic Application Maintenance** (**System Setup > Security Maintenance > Kinetic Application Maintenance**): select the company and use the **Enable Kinetic UI** switch. In a multi-company system, set it for each company.
-
-<!-- TODO verify: per-program and per-user overrides for Kinetic vs Classic forms in the releases you support -->
-
-If you're moving users over, read [Migrating to Kinetic](/classic/migrating-to-kinetic/) first: Classic customizations don't apply to the Kinetic forms.
+If you're moving users over, read [Migrating to Kinetic](/classic/migrating-to-kinetic/) first: Classic customizations don't apply to the Kinetic forms. Look into the conversion workbench if you are unsure where to begin.
 
 ## Desktop pop-ups for reports and processes
 
@@ -61,5 +55,3 @@ Users who run long reports or processes (or who want to know when a scheduled jo
 ![Retrieval Properties window with Balloon Properties check boxes for successful reports, report errors, successful processes and process errors](/images/retrieval-properties.png)
 
 The same window sets how many days of report and history data the monitor keeps.
-
-<!-- TODO screenshot: System Monitor Actions menu with Retrieval Properties highlighted (existing capture shows a person's name and company) -->

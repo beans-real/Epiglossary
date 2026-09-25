@@ -106,7 +106,6 @@ the row there doesn't stick.
 - **PO suggestions unapproved by default.** New suggestions can arrive already marked for approval.
   A post-processing directive on `Erp.BO.POSugg.GetRowsPlant` can clear that flag on the returned rows
   so buyers approve deliberately.
-  <!-- TODO verify: the name of the approval field on the PO suggestion rows returned by GetRowsPlant (source note calls it CreateApprovedPO) -->
 - **Price PO suggestions from last cost.** An In-Transaction data directive on `SugPoDtl` can fill a
   zero `UnitPrice` from `PartCost.LastMaterialCost`. Watch two details: `PartCost` is keyed by cost ID
   as well as part, and part costs are in base currency while the document price is in the supplier's

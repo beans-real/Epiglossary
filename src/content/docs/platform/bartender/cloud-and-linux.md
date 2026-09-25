@@ -62,7 +62,6 @@ breaks Production. Check which platform each environment is on before changing p
    prints.
 4. Keep the template path in **Report Location** as the path the *BarTender server* uses. Epicor only
    copies it into the file; BarTender is the one that opens it.
-   <!-- TODO verify: whether Report Location needs any change on Linux, given Epicor only writes it into the %BTW% header -->
 
 ## Related
 

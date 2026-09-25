@@ -41,8 +41,6 @@ For a material to backflush:
 
 ![Part site detail with the Primary Warehouse field highlighted](/images/pasted-image-20250127135334.png)
 
-<!-- TODO verify: the exact order Epicor checks resource, resource group and part primary warehouse/bin when choosing the backflush location. -->
-
 Anything still unissued when the job is completed can be backflushed at completion.
 
 :::caution

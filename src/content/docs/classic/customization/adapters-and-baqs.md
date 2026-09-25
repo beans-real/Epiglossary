@@ -71,8 +71,6 @@ ship.Update();
 ship.Dispose();
 ```
 
-<!-- TODO verify: the meaning of the leading 0 argument on GetOrderLineInfo/GetOrderRelInfo/GetQtyInfo, and whether these signatures differ between 10.x releases -->
-
 The way to learn a sequence like this is a **client trace**: turn on tracing, do the task by hand on the screen, and read which methods were called and with what values. [Find the method a screen calls](/platform/bpm/finding-the-right-method/) explains tracing. The community **Epicor Trace Differ** utility (see Sources) makes long traces easier to read by showing what changed in the dataset between calls.
 
 :::tip
@@ -111,7 +109,6 @@ private DataTable RunPartStockQuery(string partNum)
 
 - `ParameterID` must match the BAQ parameter name exactly, and `ValueType` should match its type (`nvarchar(50)`, `integer`, `date`...). For queries without parameters, pass the empty `QueryExecutionDataSet`.
 - Results come back in the `Results` table, with columns named by alias: `Part_PartNum`, `Calculated_OnHand`. `Copy()` the table if you keep it after disposing the adapter.
-- To filter a BAQ without parameters, add rows to `qeds.ExecutionFilter` instead. <!-- TODO verify: ExecutionFilter column layout -->
 
 A typical use is showing extra figures on an entry form, such as on-hand and available quantity for the part on the current quote line. Run the BAQ from the line view's `EpiViewNotification` (when the row changes), write the values into unbound text boxes, and blank them when the row is `-1` or when the user clicks **Clear** or **New**.
 

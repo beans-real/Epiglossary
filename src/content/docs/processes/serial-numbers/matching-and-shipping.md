@@ -24,8 +24,6 @@ There are two places to match:
 The site's **serial matching warning** setting decides whether unmatched components at receipt are
 ignored, warned about or block the receipt.
 
-<!-- TODO screenshot: Serial Matching with a job material selected and the Available to Match tab listing component serials -->
-
 ## The order that works
 
 1. Assign parent serials to the job (**Serial Number Assignment**, or at the serial-required
@@ -46,8 +44,6 @@ closed, or its demand filled, because matching isn't complete.
 
 **Cause:** labor was reported before the matching was done, and the component serials changed from
 WIP to **Consumed**. Consumed serials aren't offered for matching.
-
-<!-- TODO verify: exactly which labor transaction consumes the component serials (any labor, or completing the serial-required or final operation) -->
 
 **Fix:**
 
@@ -74,8 +70,6 @@ common reasons:
 - The job's method has **Serial Numbers Required From This Operation** on an operation, and the units
   were completed there without serials being recorded, or the flag is on the wrong operation.
 - Nobody assigned serials to the job at all, so there's nothing for the shipment to pick.
-
-<!-- TODO verify: the exact error text shown in Customer Shipment Entry when serials are missing -->
 
 **Fix:**
 

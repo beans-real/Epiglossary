@@ -45,8 +45,6 @@ robocopy "\\fileserver\share\EpicorShortcuts" "C:\Users\Public\Desktop" /e /r:0 
 - The first line copies the client itself, the second drops shared shortcuts on the public desktop.
 - Keep the source share up to date with the current client version, or every copied PC will immediately download an update.
 
-<!-- TODO verify: whether a copied (non-installed) client needs any prerequisites (e.g. .NET, report viewer runtimes) that the installer would normally add -->
-
 ## Removing the client
 
 Run the installer again as administrator and choose to remove the installation. Afterwards, delete the user's local Epicor folder if you want a completely clean slate; see [Clearing the client cache](/classic/administration/troubleshooting/#clearing-the-client-cache).

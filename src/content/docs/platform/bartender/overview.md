@@ -51,8 +51,6 @@ definition:
 | `GenSO` | Sales order labels |
 | `GenQA` | Inspection and quality labels |
 
-<!-- TODO verify: the "typical label" column is inferred from the report IDs; confirm each report's intended use in Report Style Maintenance -->
-
 Start from one of these rather than building from scratch. You can copy the style, point it at your own
 template, and extend a copy of its data definition if the label needs more fields.
 

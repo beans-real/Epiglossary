@@ -58,11 +58,10 @@ restrictedParts = string.Join(", ", partNums);   // a directive variable, used l
 
 The directive needs a reference to the DynamicQuery contract assembly in its usings and references
 settings if it isn't already available.
-<!-- TODO verify: whether the DynamicQuery contract reference must be added manually on current versions -->
 
 ## Passing BAQ parameters
 
-If the BAQ has parameters, set them on the execution parameters before calling `Execute`:
+If the BAQ has parameters, set them on the execution parameters before calling `Execute`, for example:
 
 ```csharp
 execParams.ExecutionParameter.Add(new Ice.Tablesets.ExecutionParameterRow
@@ -73,8 +72,6 @@ execParams.ExecutionParameter.Add(new Ice.Tablesets.ExecutionParameterRow
     IsEmpty = false
 });
 ```
-
-<!-- TODO verify: ExecutionParameterRow property names and ValueType values on a current version -->
 
 ## Things to know
 

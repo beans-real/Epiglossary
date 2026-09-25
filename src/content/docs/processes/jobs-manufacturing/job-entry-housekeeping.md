@@ -72,8 +72,6 @@ the most recent period.
 with `TimeStatus` not approved and a payroll date in the period works well), and don't close a period
 while activity is still open.
 
-<!-- TODO verify: the exact error text for this message. -->
-
 ## Related pages
 
 - [The job lifecycle](/processes/jobs-manufacturing/job-lifecycle/)

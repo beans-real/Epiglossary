@@ -40,8 +40,6 @@ To find the method:
 2. Load the grid (open the landing page, search, or select the record).
 3. Find the request that returned the grid's rows. Its URL names the service and method, for example `Erp.BO.PODetailSearchSvc/GetList` for the PO landing page. The response shows the result table's name and the key fields on each row.
 
-<!-- TODO screenshot: Network tab with the GetList request selected and the Response tab showing the result table and its first row -->
-
 ## Example
 
 Add each PO's total order value to a landing grid whose rows carry `PONum`:

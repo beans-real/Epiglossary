@@ -86,7 +86,6 @@ To keep a custom button clickable:
 3. In the copy's `DisableRow` action, add your button's binding column to **Except these columns**.
 4. Enable the copy, save and test in read-only mode.
 
-<!-- TODO verify: whether the original SysReadOnly rule also has to be disabled in the layer for the exception in the copy to take effect -->
 ![A copied read-only rule: condition TransView.SysReadOnly Equal true, and a DisableRow action whose Except these columns list includes the Ep Binding column of a custom button](/images/a04a9eeeafb6bd810af41fa2385fab17a53ce353-2-690x376.png)
 
 ## Rules win over events

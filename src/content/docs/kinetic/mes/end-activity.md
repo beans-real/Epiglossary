@@ -23,8 +23,6 @@ It's hidden by a base **data rule**. Search the Data Rules designer for "action"
 
 **Recipe authoring** belongs to Epicor Automation Studio, where automated workflows are called recipes. The grid appears to be where employees would tick off the steps a recipe defines as they end an activity. Without that licence it stays hidden, and there's nothing to configure.
 
-<!-- TODO verify: how Automation Studio recipes populate the End Activity actions grid once licensed -->
-
 The takeaway for your own layers: when a base field or panel won't show, check the base data rules before assuming it's missing. [Data rules](/kinetic/application-studio/data-rules/) covers reading and overriding them.
 
 ## Ending an activity an employee can't end
@@ -33,13 +31,11 @@ Now and then an employee ends up in labor they can't get out of from MES. A typi
 
 A supervisor can end the activity for them:
 
-1. Open **End Activity on Active Labor Header** (to end the employee's whole active labor header) or **End Activity on Active Labor Detail** (to end one activity).
+1. Open **End Activity on Active Labor Header** (to end the employee's whole active labor header) or **End Activity on Active Labor Detail** (to end one activity). Search the menu for "End Activity" if the names differ in your version.
 2. Enter the **employee ID**.
 3. Select the transaction to end.
 4. Click **Process** and wait for it to finish.
 5. Reload to confirm the activity is no longer active, then check the resulting labor in **Time and Expense Entry**; hours and quantities may need correcting.
-
-<!-- TODO verify: exact menu names and paths of the "End Activity on Active Labor Header/Detail" programs in Kinetic and Classic -->
 
 These are server processes, so they behave the same whichever client the supervisor uses.
 

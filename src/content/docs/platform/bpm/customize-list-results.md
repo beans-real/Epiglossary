@@ -32,7 +32,7 @@ pre-processing changes every list that uses the method.
 Putting your filter first and keeping the client's clause after it preserves any filter the screen was
 already asking for.
 
-<!-- TODO verify: that a whereClause passed to GetList can contain a trailing sort ("BY ...") clause, and that prepending a filter as shown is always safe -->
+<!-- TODO verify: prepending "<filter> and " is safe when the client's whereClause has OR terms or a trailing BY sort -->
 
 Things to know:
 
@@ -54,7 +54,10 @@ row["ProductGroup"] = "PG-01";
 
 The client can then show that value, for example as an extra grid column added in Application Studio.
 
-<!-- TODO verify: that setting a column name that isn't in the tableset schema via row["Name"] is supported on current versions and appears to Kinetic grids without further setup -->
+:::note
+Whether an extra column set this way reaches a Kinetic grid without further setup can vary between
+releases. Test it on your version.
+:::
 
 ### Example: show each job's product group in the job list
 

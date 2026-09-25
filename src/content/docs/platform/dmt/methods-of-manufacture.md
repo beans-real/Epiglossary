@@ -30,7 +30,6 @@ operation sequence it is issued to. If that operation isn't there yet, the mater
 2. Load **Part Plant** for each part and site that needs site-specific settings.
 3. Load **Part Revision** for the manufactured parts, leaving the revisions unapproved while you load
    methods.
-   <!-- TODO verify: whether DMT Bill of Operations / Bill of Materials loads are rejected against an approved revision, and whether the templates require an ECO group -->
 4. Load **Bill of Operations**. Number operation sequences with gaps (10, 20, 30…) so you can insert
    operations later without resequencing.
 5. Load **Bill of Materials**, giving each material the operation sequence it relates to.
@@ -47,7 +46,6 @@ manufactured part with its own method, need more planning:
 - Decide per subassembly whether it's a separate part pulled in as a material, or an assembly built
   inside the parent's method. The two load differently, and mixing them up is the usual reason
   multi-level loads "go screwy".
-  <!-- TODO verify: which Bill of Materials fields control pulling a subassembly in as an assembly (for example pull-as-assembly options) before documenting them -->
 - Run the first parent end to end in Pilot and inspect the whole tree before loading the rest.
 
 ## Notes

@@ -78,15 +78,13 @@ row per run. Because it has only one row, you can cross join it onto the results
 
 1. Add the option field in BAQ Report Designer (for example a date option).
 2. Download the RDL and open the `BAQReportResult` dataset's query expression.
-3. Cross join the parameter table and select the option column:
+3. Cross join the parameter table and select the option column (`Date01` in this example; check which column holds your option):
 
    ```vb
    ="SELECT R.*, P.Date01 AS OptionFromDate
      FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] AS R
      CROSS JOIN dbo.[BAQReportParameter_" + Parameters!TableGuid.Value + "] AS P"
    ```
-
-   <!-- TODO verify: which BAQReportParameter column (Date01 etc.) holds each option field -->
 
 4. Add `OptionFromDate` to the dataset's **Fields**, then use it in text boxes or calculated fields.
 5. Upload the RDL.

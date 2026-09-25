@@ -34,8 +34,6 @@ Kinetic screens talk to the server over REST, so every method call is visible in
    `Erp.BO.SalesOrderSvc/MasterUpdate`, and the **Payload** tab shows the tableset that was sent,
    including each row's `RowMod`.
 
-<!-- TODO screenshot: DevTools Network tab filtered to Svc calls with a MasterUpdate request selected and its payload visible -->
-
 The community-built Kinetic Trace Helper browser extension (see Sources) records these calls into a
 readable list, which is quicker than clicking through raw network requests.
 
@@ -43,7 +41,7 @@ readable list, which is quicker than clicking through raw network requests.
 
 The Classic client can write a trace log of every business object call. Turn on tracing from the
 client's **Tracing Options**, tick the options to include the dataset, perform the action, then open
-the log file. <!-- TODO verify: exact menu path to Tracing Options in the Classic client -->
+the log file.
 
 If your server is on-premises, server-side tracing is also available; see the Epicor system
 administration documentation.

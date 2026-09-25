@@ -36,8 +36,6 @@ In testing it failed on how `Translate` behaves when called this way:
 
 When the session language itself is set, Epicor loads the full translation set by a different route, which is why switching the **user's** language works and overriding `Translate` doesn't.
 
-<!-- TODO verify: the exact row limit observed from LangTran.Translate and whether it varies by release -->
-
 ## What does work
 
 - **One user account per language** at shared stations, with the station signed in as the right one. Simple, supported, but it means separate accounts to manage.
@@ -49,7 +47,5 @@ Workarounds that swap the signed-in account behind the scenes (holding passwords
 ## Warning: don't put a message BPM on session methods
 
 While experimenting, don't add a directive that shows a message (or throws) on the session methods used at sign-in, such as `Ice.Lib.SessionMod` methods like `GetLanguage`. They run for **every** sign-in, including administrators'. A directive that interrupts them can stop anyone from logging in, and the only way back is to disable the directive directly in the database.
-
-<!-- TODO verify: whether this lock-out applies to all SessionMod methods or only those called during sign-in -->
 
 If you must trace session behaviour, use server logs or write to a UD table from a post-processing directive, test in a non-production environment, and keep a second, already-signed-in admin session open so you can disable the directive if it misbehaves. General BPM debugging advice is in [Common BPM problems](/platform/bpm/troubleshooting/).

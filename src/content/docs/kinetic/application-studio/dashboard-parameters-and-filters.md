@@ -31,9 +31,6 @@ Where-clause syntax, `AND`/`OR` combinations and the `??{}` / `?{}` question are
 
 To reload as soon as a filter changes, add an event with trigger **DataTable > Column Changed** on the filter column that refreshes the grid.
 
-<!-- TODO verify: the recommended widget/event to make a provider-model grid reload immediately when a filter value changes -->
-<!-- TODO screenshot: a dashboard with a filter panel card above a grid, and the grid's Where clause referencing the filter field -->
-
 ## BAQs with parameters
 
 If the BAQ itself has parameters, the out-of-the-box behavior is a **BAQ Parameters** slide-out that appears when the grid's card expands. Users fill it in and click **OK**. If that's all you need, tick **Expand at Runtime** on the grid so the prompt appears as soon as the dashboard opens.
@@ -129,9 +126,6 @@ The chip selector (`ep-search-chip-selection`) shows each chosen value as a chip
 
    ![search-value-set with Ep Binding TransView.Jobs and Value actionResult.JobNum](/images/c54772cbce268e07aab8383f1d8737706901cb92.png)
 
-<!-- TODO verify: the format search-value-set writes for multi-select results (tilde-delimited?) and how to pass it on to ReportParam filters -->
-<!-- TODO screenshot: the chip selector at runtime with three chips -->
-
 ### Option B: a paste box
 
 Users who copy a column out of Excel want to paste it. Add a multi-line text box for pasting and turn its contents into a tilde list:
@@ -150,5 +144,3 @@ Users who copy a column out of Excel want to paste it. Add a multi-line text box
    This splits on line breaks, trims stray carriage returns and spaces, drops blank lines and joins the rest with `~`. Note the doubled backslash (see [Expressions](/kinetic/application-studio/expressions/#escaping-backslashes)).
 
 Pasting with **Ctrl+V** works. The right-click "paste insert" from Classic isn't available.
-
-<!-- TODO verify: arrow functions inside row-update expressions; if not supported, chain split/join instead -->

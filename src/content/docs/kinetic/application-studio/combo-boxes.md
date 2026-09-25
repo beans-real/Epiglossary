@@ -86,6 +86,5 @@ display <> "Job" AND display <> "Return Shipment"
 
 For a BAQ-driven combo, use the BAQ column aliases in the filter instead.
 
-<!-- TODO verify: whether Row Filter also accepts single-quoted strings; the working example used double quotes -->
 ![Combo box Advanced properties with TextField display, Value Field value and a Row Filter on display that excludes the Job and Return Shipment options](/images/b8f073f03515d091d8e347aa087437d4adf0262e.png)
 

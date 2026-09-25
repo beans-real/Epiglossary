@@ -92,8 +92,6 @@ whose quantity changes often show this most.
 table, the "duplicate" is a reporting artefact. When you build your own WIP BAQ, group labor by the
 `LaborDtl` key rather than joining through quantity fields, so the extra rows don't multiply costs.
 
-<!-- TODO verify: whether the standard WIP report double-counts cost in this situation or only shows an extra zero-quantity line. -->
-
 **Prevention:** settle a job's production quantity before labor starts, and avoid repeated quantity
 changes on jobs already in progress.
 

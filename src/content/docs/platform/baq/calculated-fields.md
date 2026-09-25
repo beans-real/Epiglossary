@@ -252,6 +252,5 @@ Set the field's data type to `datetime`. To join the result to a table that only
 
 ### Fiscal periods
 
-Don't hard-code fiscal quarters as date ranges; they need editing every year and break the first time the calendar changes. Epicor's financial functions `FiscalYear(company, date)` and `FiscalPeriod(company, date)` return the fiscal year and period for a date from the fiscal calendar, and you can build a quarter from the period with a CASE.
+Don't hard-code fiscal quarters as date ranges; they need editing every year and break the first time the calendar changes. Epicor's financial functions, such as `FiscalYear(company, date)` and `FiscalPeriod(company, date)` (check the exact names in the editor's function list), return the fiscal year and period for a date from the fiscal calendar, and you can build a quarter from the period with a CASE.
 
-<!-- TODO verify: the exact schema-qualified names of the FiscalYear/FiscalPeriod BAQ functions as they appear in the editor, and whether they handle multiple fiscal calendars -->

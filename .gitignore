@@ -22,3 +22,7 @@ pnpm-debug.log*
 
 # local review notes
 review-checklist.md
+
+# local editor/tooling state (may contain tokens)
+endpoints.json
+session-census.*.json

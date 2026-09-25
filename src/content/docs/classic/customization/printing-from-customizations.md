@@ -13,7 +13,7 @@ Every Epicor report form (PO Form, Job Traveler, Pack Slip...) is driven by a **
 
 ## Print or email one report from a button
 
-The pattern is: create the report adapter, load its default parameters, set the fields you need, submit.
+The pattern is: create the report adapter, load its default parameters, set the fields you need, submit. NOTE: THE SPECIFIC ACTIONS USED MAY DIFFER PER VERSION.
 
 ```csharp
 private void SendPurchaseOrder(int poNum, string toEmail, string ccEmail)
@@ -44,7 +44,6 @@ private void SendPurchaseOrder(int poNum, string toEmail, string ccEmail)
 }
 ```
 
-<!-- TODO verify: which AutoAction value sends the report by email in your release (this pattern was used with SSRSPrint plus the EMail fields on 10.2), and whether FaxSubject is the field used as the email subject -->
 
 - The parameter row's name and fields differ per report (`POFormParam`, `JobTravParam`...). Open the report form in Developer Mode and look at the `ReportParam` view's columns, or use the Object Explorer, to see what's there.
 - `RunDirect()` runs the report straight away; `SubmitToAgent(...)` queues it on the task agent like the report screen's **Print** button does. Queuing is kinder to the user's screen for large reports.
@@ -88,7 +87,7 @@ using (ReportMonitorAdapter monitor = new ReportMonitorAdapter(oTrans))
 }
 ```
 
-How you download attachments depends on where they're stored: files on a network share can be copied directly, while documents in Epicor's content management store are downloaded through the attachment service. <!-- TODO verify: attachment download method names for file-share vs ECM storage in 10.2 -->
+How you download attachments depends on where they're stored: files on a network share can be copied directly, while documents in Epicor's content management store are downloaded through the attachment service.
 
 :::caution
 Poll with a delay (a few seconds between checks) and a time-out, and show progress to the user. A loop that calls the server as fast as it can will slow the system for everyone while the reports render.

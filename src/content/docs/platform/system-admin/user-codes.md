@@ -11,8 +11,6 @@ maintain yourself in **User Codes Maintenance**. Each list has a code type (the 
 of codes (the entries). Because they are plain data, anyone with access can add or retire an entry
 without a developer, a data model regeneration or a new release of a customization.
 
-<!-- TODO verify: menu path for User Codes Maintenance in Kinetic and Classic -->
-
 ## The tables
 
 | Table | Holds | Key fields |
@@ -22,8 +20,6 @@ without a developer, a data model regeneration or a new release of a customizati
 
 Join `UDCodes` to `UDCodeType` on `Company` and `CodeTypeID`. Both are company-specific, so a list
 created in one company doesn't exist in another.
-
-<!-- TODO verify: field names CodeTypeDesc (UDCodeType) and IsActive (UDCodes) -->
 
 ## What they're good for
 

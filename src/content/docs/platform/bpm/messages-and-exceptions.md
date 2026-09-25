@@ -63,7 +63,7 @@ throw new Ice.Common.BusinessObjectException(
 :::caution
 Throwing from post-processing shows the error, but the base method has already done its work, so it
 isn't a reliable way to cancel a save. Validate in pre-processing.
-<!-- TODO verify: whether a post-processing exception on Update rolls back the base method's database changes in current versions -->
+<!-- TODO verify: does a post-processing exception on Update roll back the base method's save? -->
 :::
 
 ## Pattern: report every problem at once

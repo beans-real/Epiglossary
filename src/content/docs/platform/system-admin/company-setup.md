@@ -55,4 +55,6 @@ environment, and then assigned to the company that needs it.
 After enabling a CSF, users need to log out and back in. Some CSFs have their own setup steps and
 conversion programs. Check the installation notes for the country on EpicWeb before you start.
 
-<!-- TODO verify: exact node and tab names in the Administration Console (Licensing > CSF tab) against a current release -->
+:::note
+Administration Console node and tab names can differ between releases. If you can't find the **CSF** tab, look under your license in your version.
+:::

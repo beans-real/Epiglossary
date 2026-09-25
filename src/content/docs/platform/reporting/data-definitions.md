@@ -86,8 +86,6 @@ tables and the fields that link them. Set the grid to show at least **Parent**, 
 **Child** and **Child Field**; the default column layout isn't much use. It doesn't list every possible
 join, but once you know how a table links to one relative you can usually work out the rest.
 
-<!-- TODO screenshot: Dataset Relationships grid filtered to OrderHed with Parent, Parent Field, Child and Child Field columns -->
-
 Often the shortest join isn't through the obvious parent. On a pack slip, `ShipDtl` already carries
 `OrderNum`, `OrderLine` and `OrderRelNum`, so you can relate `ShipDtl` straight to `OrderRel` on
 `Company`, `OrderNum`, `OrderLine` and `OrderRelNum` without going through `OrderDtl`.
@@ -105,8 +103,6 @@ descriptive columns from the record they point to without a new table.
 
 The linked column appears in the dataset on the *source* table, named
 `<link column>_<picked column>`. The example above gives `ShipDtl.OrderNum_PONum`.
-
-<!-- TODO screenshot: RDD Linked Tables > Description Fields with OrderNum picked and PONum moved to Picked (existing forum screenshot shows a company name) -->
 
 :::tip[Check before you build]
 The standard pack slip already has the customer PO number as `OrderNum_PONum`. Look through the

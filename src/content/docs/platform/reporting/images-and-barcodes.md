@@ -34,8 +34,6 @@ supplier statement. For those, no RDL editing is needed:
 The image is stored with the style, per company, so a multi-company system can use one style with a
 different logo in each company.
 
-<!-- TODO screenshot: Report Style Companies/Images sheet after Retrieve, with a logo selected in the image list -->
-
 ### Retrieve finds nothing
 
 **Retrieve** looks for a dataset called `ReportImages` in the RDL. Forms without one, such as the quote
@@ -74,7 +72,7 @@ reach it. Almost every Epicor RDD already includes the `Company` table.
 
 2. Store each logo on a file share and enter its UNC path, for example
    `\\fileserver\share\logos\main.png`. Give the account the report server uses read access to the
-   share. <!-- TODO verify: which account SSRS uses to fetch external file images in an Epicor install -->
+   share.
 3. Include the field in your RDDs.
 4. In the RDL, add an **Image** with **Select the image source** set to **External** and a value
    expression that builds a file URL:
@@ -143,7 +141,12 @@ The simplest barcode on an Epicor SSRS form is a Code 39 barcode made with a fon
 ![Text Box Properties Font page with DataWorks Bar 39 selected at 24pt](/images/barcode-39-ssrs.png)
 
 The font has to be installed where the report is rendered, which is the report server, not the
-user's PC. <!-- TODO verify: whether DataWorks Bar 39 is installed with Epicor's SSRS components on-premises and in the cloud -->
+user's PC.
+
+:::note
+Whether DataWorks Bar 39 is already on the report server can differ between on-premises and cloud
+installs, and between releases. Check before you rely on it.
+:::
 
 Code 39 only covers upper-case letters, digits, space and `- . $ / + %`. Convert the value with
 `UCase()` if it might contain lower-case letters, and use a different symbology if your data has other

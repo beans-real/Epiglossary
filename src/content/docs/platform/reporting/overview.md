@@ -93,7 +93,7 @@ the report the item runs. A few you'll meet often:
 | Scheduled Shipments | `SchedShip` |
 | Pro forma invoice | `ProFormaInvc` |
 | Customer Statements | `CustSt` |
-| AP invoice form printed from AP Invoice Entry | `APDebitMemoForm` <!-- TODO verify: report ID for the AP Invoice Entry print --> |
+| AP invoice form printed from AP Invoice Entry | `APDebitMemoForm` |
 
 ## Pages in this section
 

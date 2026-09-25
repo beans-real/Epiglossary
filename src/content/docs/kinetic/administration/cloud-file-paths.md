@@ -59,7 +59,7 @@ Use `/epi/fs` if you are keeping the Azure File Share. Use `/epi/ftp` when you w
 work only against FTP, separate from general file share storage. Note the forward slashes, and that Linux
 paths are case-sensitive: `/epi/fs/Outbound` and `/epi/fs/outbound` are different folders.
 
-<!-- TODO verify: current Epicor documentation for the /epi/fs and /epi/ftp mount points -->
+<!-- TODO verify: /epi/fs and /epi/ftp mount points against current Epicor Cloud docs -->
 
 ## In BPMs and Epicor Functions
 
@@ -75,7 +75,7 @@ var path = new FilePath(ServerFolder.FileShare, @"Outbound\Orders\order-10001.cs
 this.Sandbox.IO.File.WriteAllText(path, csvText);
 ```
 
-<!-- TODO verify: that FilePath subpaths written with backslashes resolve correctly on Linux environments (Epicor's examples use backslashes) -->
+<!-- TODO verify: ServerFolder.FileShare and ServerFolder.Ftp exist (Epicor docs list only CompanyData, UserData), and backslash subpaths resolve on Linux -->
 
 - `ServerFolder.FileShare` is the environment's file share (the `/epi/fs` mount on Linux).
 - `ServerFolder.Ftp` reaches the FTP folder on its own, so you can use both in one environment.
@@ -83,8 +83,6 @@ this.Sandbox.IO.File.WriteAllText(path, csvText);
 
 Older code in some cloud environments used a helper that converted UNC-style paths. That approach is
 deprecated in favor of `FilePath`, and UNC-style paths fail on Linux regardless.
-
-<!-- TODO verify: ServerFolder.FileShare and ServerFolder.Ftp member names; Epicor's Functions guide only documents CompanyData and UserData -->
 
 :::caution[Check where ServerFolder.FileShare points]
 There are reports of an environment's `ServerFolder.FileShare` being repointed to the FTP root instead of

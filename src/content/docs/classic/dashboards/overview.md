@@ -41,7 +41,6 @@ Menu Maintenance offers two program types for dashboards:
 - **Dashboard-Assembly** runs the compiled assembly produced by **Deploy Dashboard**. It's the normal choice for new dashboards and gives users features such as exporting the grid straight to Excel.
 - **Dashboard-Runtime** is the older, legacy approach that runs the dashboard from its definition.
 
-<!-- TODO verify: exact functional differences between Dashboard-Assembly and Dashboard-Runtime beyond load method and Excel export -->
 
 :::caution
 Deployed dashboards are cached on each client. After you redeploy, users may keep seeing the old version until their client cache is cleared; see [Classic client troubleshooting](/classic/administration/troubleshooting/#clearing-the-client-cache).

@@ -46,8 +46,6 @@ The event now runs only when the value actually changes, whether it was typed, p
 
 When the event runs, the newly selected row is already current, so `{XX_OrderGrid.OrderHed_OrderNum}` in a `row-update` or `erp-baq` gives you the clicked row's value.
 
-<!-- TODO screenshot: trigger properties for a DataView / Row Changed event targeting a grid's BAQ view -->
-
 ## Refresh the screen after a function updates data
 
 **Scenario:** an event calls an Epicor Function (or a BAQ update) that changes the record on the server. The work succeeds, but the screen still shows the old values until the user clicks **Refresh**.

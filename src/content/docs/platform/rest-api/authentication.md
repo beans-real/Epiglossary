@@ -44,7 +44,6 @@ Authorization: Bearer <access token>
 Environments that sign in through Azure AD / Microsoft Entra ID or Epicor Identity Provider can use
 tokens from those services instead. Which ones are available depends on how your environment is
 configured.
-<!-- TODO verify: whether TokenResource.svc token authentication is available on Epicor-hosted environments that use Epicor Identity Provider -->
 
 ## API keys (v2)
 

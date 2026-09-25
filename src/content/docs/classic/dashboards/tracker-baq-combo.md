@@ -40,7 +40,6 @@ A plain tracker prompt is a text box: users have to know and type the exact valu
 5. Save the customization, close the dialog, and **Save** the dashboard.
 6. Test on the **Dashboard** tab: pick a value and click **Refresh**. Then redeploy the dashboard (**Tools > Deploy Dashboard**).
 
-<!-- TODO screenshot: BAQCombo properties panel with DynamicQueryID, DisplayMember, ValueMember, IsTrackerQueryControl, QueryColumn and the Dashboard group filled in (existing capture shows a personal BAQ prefix) -->
 
 ## Notes
 

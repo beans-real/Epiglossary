@@ -19,9 +19,7 @@ This page covers the BAQ side. To put an updatable BAQ on a Kinetic screen or da
 
 ### 1. Mark the query updatable
 
-On the query's general details, tick **Updatable**. This enables the update settings (Kinetic: the **Update** options on the Overflow menu; Classic: the **Update** sheet).
-
-<!-- TODO verify: where the Update settings live in the Kinetic BAQ designer (panel and menu names) -->
+On the query's general details, tick **Updatable**. This enables the update settings (Kinetic: typically the **Update** options on the Overflow menu; Classic: the **Update** sheet).
 
 ### 2. General properties
 
@@ -109,14 +107,10 @@ The result rows use the BAQ's column aliases (`OrderHed_OrderNum`, `Calculated_S
 
 Before reaching for code, check whether a `STRING_AGG` in an inner subquery does the job (see [Calculated fields](/platform/baq/calculated-fields/#aggregates-and-lists-of-values)). SQL is faster and has no code to maintain.
 
-<!-- TODO verify: whether a GetList directive on a uBAQ runs for every consumer of the BAQ (Kinetic dashboards, BAQ reports, REST, quick searches) or only for calls made through the uBAQ's GetList -->
-
 ## Gotchas
 
 - **The save does nothing and no error appears.** Check the column mapping: an editable column that isn't mapped to a business object field is simply ignored.
 - **The update can't find the record, or adds a new one instead.** A key field is missing from the display columns or the mapping. On UD tables, that's usually one of `Key2` to `Key5`.
 - **The uBAQ always uses the live database.** Updatable queries run against the primary database, never a read-only replica, so heavy uBAQs compete with users. Keep their row counts modest with criteria or parameters.
-- **Directives travel separately.** Exporting a BAQ exports the query. Check that its uBAQ directives also move with it to the next environment.
+- **Directives travel separately.** Exporting a BAQ may export only the query. Check that its uBAQ directives also move with it to the next environment.
 
-<!-- TODO verify: whether BAQ export includes the uBAQ's BPM directives, or they need a separate BPM export or Solution Workbench -->
-<!-- TODO screenshot: Update Processing with BPM Update, business object Ice.UD03, table UD03 ticked and the Query to Object Column Mapping showing Company and Key1 to Key5 -->

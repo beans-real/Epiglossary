@@ -20,7 +20,7 @@ Use Epicor's own mail classes, which send through the SMTP server configured in 
 ```csharp
 var message = new Ice.Mail.SmtpMail();
 message.SetFrom("erp@example.com");
-message.SetTo(recipients);          // several addresses separated by semicolons
+message.SetTo(recipients);          // typically several addresses separated by semicolons
 message.SetSubject(subject);
 message.SetBody(html);
 message.IsBodyHtml = true;
@@ -32,7 +32,6 @@ using (var mailer = new Ice.Mail.SmtpMailer(this.Session))
 ```
 
 `SetCC` and `SetBcc` work the same way as `SetTo`.
-<!-- TODO verify: that SetTo accepts a semicolon-separated list (the source notes both split lists and passed them whole), and that SmtpMailer.Send has a one-argument overload (the source only used Send(message, attachments)) -->
 
 :::caution[Don't hard-code an SMTP server]
 It's possible to use `System.Net.Mail.SmtpClient` with a host name in the code, but then the function

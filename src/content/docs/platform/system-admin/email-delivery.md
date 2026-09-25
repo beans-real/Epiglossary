@@ -20,8 +20,6 @@ to trust the sender. Work through them in order and you'll find it quickly.
 4. The recipient's mail system checks the sender's domain records (SPF, and often DKIM and DMARC) and
    decides whether to deliver it, junk it or reject it.
 
-<!-- TODO verify: the exact menu location of the company SMTP settings in Kinetic and Classic -->
-
 ## Find where it stopped
 
 1. **Did Epicor try to send it?** Open the **Email Log** and look for the message. If there is no

@@ -36,8 +36,6 @@ A layer can be scoped to **all companies** (the default) or to one company. Laye
 
 To open an existing layer instead, go to **Layer Selection > Change Layer**, find it in the list and click **Edit**.
 
-<!-- TODO screenshot: the Layer Selection panel with Layer Name, Description, CGC Code and Company fields filled in -->
-
 ## Save, preview and publish
 
 - **Save** validates every open tab and stores the layer as a **draft**. If a tab fails validation, the focus jumps to it and the error shows in the **Problems** panel.
@@ -102,4 +100,6 @@ For planned deployments, a **Solution Workbench** solution with a **KineticApp**
 
 **Fix:** the flag can't be cleared from the UI. Ask Epicor Support for a data fix to clear it on the affected layer, then reopen the layer.
 
-<!-- TODO verify: whether any newer release lets you clear the System flag without a data fix -->
+:::note
+Whether the System flag can be cleared without a data fix may differ between Kinetic releases. Check your version before raising a case.
+:::

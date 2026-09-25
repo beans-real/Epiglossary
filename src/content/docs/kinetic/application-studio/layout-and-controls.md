@@ -68,8 +68,6 @@ There are three ways to hide a control. Pick by *when* it should be hidden:
 | Whenever some data condition is true | A **data rule** | Action **SettingStyle.Invisible** (or **SettingStyle.Disabled**) on the control's bound field. See [Data rules](/kinetic/application-studio/data-rules/). |
 | At one moment, as part of an event | The `property-set` widget in an event | Target the control, set the `hidden` property to `true`, or to a binding such as `{TransView.XX_HideDetails}` so the data decides |
 
-<!-- TODO verify: the exact field labels on the property-set widget (component ID / property name / value) in current releases -->
-
 Prefer the data rule when the condition depends on data. A rule re-evaluates every time the data changes, while an event only runs when triggered, so an event-based hide can get out of step. If you use both on the same control, the rule wins. See [Troubleshooting](/kinetic/application-studio/troubleshooting/#event-change-to-a-property-has-no-effect).
 
 ## Toolbar tools
@@ -112,8 +110,6 @@ The **New** (and **Delete**) buttons on a grid come from the tools defined on it
 
 The same approach should work with a `Delete` tool for the delete button.
 
-<!-- TODO verify: hiding a Delete-type tool on the data view removes the grid's delete button the same way -->
-
 ![Data View designer, Tools section with a row of Type New and the Hidden checkbox ticked](/images/pasted-image-20260306094800.png)
 
 ## Data tree captions
@@ -126,5 +122,3 @@ On screens with a tree (such as method or job trackers), you can control what ea
 4. Open **Show Columns** to toggle which columns appear in the node text, rename their labels and drag them into order.
 
 Expect some trial and error before the captions look right. Preview after each change.
-
-<!-- TODO screenshot: page-details > Data Tree > Show Columns with a few columns toggled on and their labels edited -->

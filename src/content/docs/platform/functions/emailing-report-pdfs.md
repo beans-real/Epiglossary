@@ -149,7 +149,10 @@ this.CallService<Ice.Contracts.MemoSvcContract>(memoSvc =>
 result = $"Sent to {recipient}.";
 ```
 
-<!-- TODO verify: AutoAction value for render-only output from SubmitToAgent (the source used SSRSPRINT; REST examples use SSRSPreview), and that TaskNote is copied to SysRptLst.RptNote -->
+:::note
+The `AutoAction` value that renders without printing differs between examples and releases
+(`SSRSPREVIEW`, `SSRSPRINT`). Check which one your version expects for `SubmitToAgent`.
+:::
 
 ## How the pieces fit
 

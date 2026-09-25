@@ -82,7 +82,7 @@ Two things make it less relevant in Epicor than people expect:
 - **You can't add table hints like `NOLOCK` in the BAQ designer.** The equivalent is the `TransactionIsolation` execution setting with the value `ReadUncommitted`, which applies to the whole query. Epicor's default (`NotSet`) uses the provider's normal isolation level.
 - **Epicor databases use row versioning.** With snapshot-based isolation, readers see the last committed version of each row instead of waiting for writers, and writers don't wait for readers. Reports don't block data entry, and the thing `NOLOCK` was meant to fix mostly doesn't happen. Forcing `ReadUncommitted` then buys little and still risks dirty reads.
 
-<!-- TODO verify: which option Epicor enables by default (ALLOW_SNAPSHOT_ISOLATION, READ_COMMITTED_SNAPSHOT or both); only READ_COMMITTED_SNAPSHOT makes ordinary queries non-blocking automatically -->
+<!-- TODO verify: whether Epicor turns on READ_COMMITTED_SNAPSHOT by default; if not, the "reports don't block data entry" claim above is wrong -->
 
 To see what your database actually has, a DBA can run:
 

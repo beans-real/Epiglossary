@@ -51,9 +51,6 @@ A customer with no orders in a month gets NULL in that column. To show zeros, ad
 
 Run the query. You should get one row per customer and year, with a column per month. Add more grouping columns (part, sales rep, product group) to the inner subquery and the TopLevel display to break the rows down further.
 
-<!-- TODO screenshot: Pivot SubQuery FOR Clause tab with a SUM aggregate, Calculated_OrderMonth as the pivot column and an IN list of 1 to 12 -->
-<!-- TODO screenshot: pivot results with one column per month -->
-
 ## Notes
 
 - **Order of the IN list.** The designer can sort the value list as text (`1, 10, 11, 12, 2, 3` ...). Entering the values in that order to begin with makes the list easier to check. The column order users see comes from the display fields, which you can rearrange.

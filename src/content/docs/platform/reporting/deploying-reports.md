@@ -46,8 +46,6 @@ When an RDL has a problem, the upload only reports a generic failure. On-premise
 directly to the report server through its web portal; SSRS gives a much more specific message there.
 :::
 
-<!-- TODO screenshot: reports.zip opened in Explorer showing reports > CustomReports > report folder > .rdl -->
-
 ## Testing against saved data
 
 Two habits make report development faster:
@@ -58,13 +56,17 @@ Two habits make report development faster:
   printing. From the **System Monitor**, **Actions > Design SSRS Report** opens the SSRS Report Design
   program, where you can download the report, preview your local copy against that extracted data, and
   publish it when you're happy.
-  <!-- TODO verify: Generate for Design and the SSRS Report Design program in the Kinetic client (documented for the Classic interface) -->
+
+:::note
+These menu paths are from the Classic interface. In the Kinetic client, Generate for Design and the SSRS
+Report Design program may sit in different places or differ by release.
+:::
 
 ## Moving reports between environments
 
 Use **Solution Workbench** to move custom reports from a test environment to production, so the report
 style, its RDD and the RDL files travel together, rather than recreating styles by hand and uploading
-files. <!-- TODO verify: which report elements a Solution Workbench solution includes -->
+files.
 
 ## When an upload keeps failing
 

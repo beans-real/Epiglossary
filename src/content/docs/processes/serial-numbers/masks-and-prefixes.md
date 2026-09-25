@@ -39,8 +39,6 @@ The default characters, as set in Company Configuration:
 For example, `@@@######<M><YYYY>` produces three letters, a six-digit sequence, then the month and
 four-digit year the serial was created.
 
-<!-- TODO verify: whether plain literal characters (for example a fixed site code) can be typed directly into a generation mask -->
-
 ## Two kinds of mask
 
 - **Generation** masks decide the format of serial numbers Epicor creates for you. The sequence part

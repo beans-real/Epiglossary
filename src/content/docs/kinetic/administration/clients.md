@@ -38,8 +38,6 @@ MES runs from the same address with an MES route and mode:
 https://epicor-app01.example.com/Kinetic/Apps/Erp/Home/#/home/MES/home?mode=MES
 ```
 
-<!-- TODO verify: the difference between mode=MES and mode=DC, and which the Web MES link in CMP uses -->
-
 Browser shortcuts need the [Edge Agent](/kinetic/administration/edge-agent/) for local printing and for
 opening Classic forms.
 
@@ -47,9 +45,6 @@ opening Classic forms.
 
 **Power Tools** is a desktop download for Epicor Cloud that gives administrators and developers tools
 that aren't available in the browser client. Install one copy per environment you work in.
-
-<!-- TODO verify: which tools the current Power Tools package includes -->
-
 
 1. **Grant access.** Add the user to the **Power Tool User** security group in **User Account Security
    Maintenance**. The user signs out and back in.
@@ -81,8 +76,6 @@ and use features that a security manager has enabled for the company:
 4. Turn on each feature other users should be allowed to use, or **All Features**.
 5. Log out. Users log out and back in (or refresh) to pick the change up, then turn the features on for
    themselves.
-
-<!-- TODO screenshot: Preview Features tab with the For this company option (no user names visible) -->
 
 Preview features can change or disappear between releases. Send Epicor feedback on them through
 Support.

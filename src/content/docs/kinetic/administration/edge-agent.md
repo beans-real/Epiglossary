@@ -63,8 +63,6 @@ gets nothing. You can register up to four application server URLs, for example L
 5. Finish the install. Two new icons appear in the system tray: **Epicor Edge Agent** (logs and the
    diagnostics page) and **Epicor Print Tray** (advanced print options).
 
-<!-- TODO screenshot: Edge Agent installer page where the allowed application server URLs are entered -->
-
 ## Test it
 
 With the agent running, open `https://localhost:6071/#/home` in the browser. The diagnostics page shows
@@ -120,8 +118,6 @@ How it works:
 - `--allowedURL` sets the application server the agent will accept requests from.
 
 Change `$installer` and `$appServer` for your environment. Run it with administrator rights.
-
-<!-- TODO verify: the Edge Agent Configuration menu item mentioned for mass installs, and whether it replaces or complements a scripted install -->
 
 ## If it doesn't work
 

@@ -31,7 +31,6 @@ the workstation first and falls back to the company.
 :::note[Kinetic]
 In the browser client, printing straight to a local printer goes through the Epicor Edge Agent on
 the user's PC. Without it, users preview the PDF and print from the browser.
-<!-- TODO verify: Edge Agent requirement for Kinetic client-side SSRS printing -->
 :::
 
 For automated printing, prefer a server printer. The Auto Print action allows a client printer, but
@@ -104,8 +103,6 @@ the group changes. You can keep the addresses in **User Codes** and route from t
 3. Add the BAQ as a data source in the report's RDD (a copy, if it's a standard report).
 4. In the style's APR rule, choose the BAQ as the **Break Table**, break on it, and insert its email
    column into the **Send E-mail** template's **To** field.
-
-<!-- TODO verify: that a BAQ data source can be selected as the Break Table, and how the break produces one email per code -->
 
 Keep in mind:
 

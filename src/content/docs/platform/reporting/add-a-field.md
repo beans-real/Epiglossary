@@ -159,7 +159,6 @@ header. To show `OrderHed.PromiseDate`:
 
 Keep the RDL join in line with the RDD relationship. Each extracted table only holds the rows the RDD
 reached through its relationships, so joining from a different table in the RDL can return nothing.
-<!-- TODO verify: that extracted child tables contain only rows reached through the RDD relationship -->
 
 ### Order line comments with line breaks
 

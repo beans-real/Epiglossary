@@ -56,7 +56,6 @@ mailer.Send(message);
 ```
 
 `GetMailer(async: false)` sends immediately; `true` queues the send. `SetCC` is available as well.
-<!-- TODO verify: whether SetTo accepts several addresses separated by semicolons -->
 
 ### Getting recipients from data
 

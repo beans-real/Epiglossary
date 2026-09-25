@@ -78,7 +78,7 @@ Many maintenance screens can show a record's change log. This example builds tha
 5. **Add `rest-erp`**:
    - **Service Name** `Ice.BO.ChgLogSvc`, **Service Operation** `GetChgLog`
    - **Method Parameters**:
-     - `ip_systemCode` = `ICE` for `Ice` tables or `ERP` for `Erp` tables
+     - `ip_systemCode` = `ICE` for `Ice` tables, typically `ERP` for `Erp` tables
      - `ip_tableName` = the table, e.g. `UD01`
      - `ip_sysRowID` = the current record's `SysRowID`, e.g. `{UD01.SysRowID}`
    - **Response Parameters**: **Parameter Name** `ChgLog`, **View Name** `XX_ChgLog`, **Parse from Response Path** `returnObj`
@@ -95,9 +95,6 @@ Many maintenance screens can show a record's change log. This example builds tha
 
    ![The finished Change Log slide-out open over a UD maintenance screen, listing change log rows (user IDs blurred)](/images/d753700228cf9247c3f0425081cf76f60d0e44e6-2-690x348.png)
 
-<!-- TODO verify: ip_systemCode value for Erp tables (ERP?) -->
-<!-- TODO verify: whether rest-erp Field Value needs braces ({UD01.SysRowID}) or accepts a bare View.Column reference; the working example this is based on showed it without braces -->
-
 ## Example: run a BAQ with custom parameters
 
 When `erp-baq` can't pass parameters the way you need, call `Ice.BO.DynamicQuerySvc` directly with `rest-erp`, using `ExecuteByID` to run a BAQ (or `UpdateByID` to save an updatable one on older releases). The full setup is in [Dashboard parameters and filters](/kinetic/application-studio/dashboard-parameters-and-filters/#baqs-with-parameters).
@@ -112,6 +109,4 @@ When `erp-baq` can't pass parameters the way you need, call `Ice.BO.DynamicQuery
 3. Add each input under **Method Parameters**. For a dataset input, map a view under **Request Parameters**.
 4. Read outputs in later widgets as `{actionResult.OutputName}`, for example in a `row-update`.
 
-The library must be published and the function must allow being called this way. If the call fails, the Network tab shows the server's error message.
-
-<!-- TODO verify: which function library security settings are required for rest-erp calls from Application Studio -->
+The library must be published and available to the calling company. A library marked **For Internal Use Only** can't be called over REST, which is what `rest-erp` uses. If the call fails, the Network tab shows the server's error message. See [Libraries, publishing and security](/platform/functions/libraries-and-security/).

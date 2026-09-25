@@ -10,14 +10,11 @@ Two small changes that shop-floor users ask for often.
 
 ## A home-page link to MES
 
-Users who use both the normal Kinetic menu and MES in the browser shouldn't have to remember or type the MES address. Add a **Web Link** widget to their Kinetic home page that points at MES:
+Users who use both the normal Kinetic menu and MES in the browser shouldn't have to remember or type the MES address. Add a web link widget to their Kinetic home page that points at MES:
 
 1. Open MES in the browser once and copy the address from the address bar.
 2. On the Kinetic home page, add a widget and choose the web link type.
 3. Paste the MES address, give it a clear title such as **Shop floor (MES)**, and save the home page.
-
-<!-- TODO verify: exact name of the home-page widget type (Web Link) and whether it can open in a new tab -->
-<!-- TODO screenshot: Kinetic home page with a Web Link widget pointing to MES -->
 
 For shared shop-floor PCs, a browser shortcut on the desktop that opens straight into MES does the same without a home page at all.
 
@@ -35,9 +32,7 @@ Operators like to see the current time on the screen they clock in from. It's te
 
    The `#_..._#` wrapper runs JavaScript in the browser; see [Expressions and JavaScript](/kinetic/application-studio/expressions/).
 
-4. **An event that starts the clock.** Create a second event triggered when `txtClock` is **created**. Give it the same `row-update` (so the clock shows immediately), then a timer widget that calls `XX_UpdateClock` every **1** second.
-
-<!-- TODO verify: the exact name of the dashboard timer widget in the Events designer and its interval unit -->
+4. **An event that starts the clock.** Create a second event triggered when `txtClock` is **created**. Give it the same `row-update` (so the clock shows immediately), then a timer widget that calls `XX_UpdateClock` every second (check which interval unit the widget expects).
 
 Use `toLocaleTimeString()` instead of `toLocaleString()` for the time without the date. The value is display-only and never saved, because nothing writes `TransView` back to the server.
 

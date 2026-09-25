@@ -31,8 +31,6 @@ account-period amounts by hand is slow, so most companies build the budget in Ex
 6. Back in **Account Budget**, choose **Import Budgets**, select your file and import it.
 7. Open a few accounts for the fiscal year and check the period breakdown matches the spreadsheet.
 
-<!-- TODO screenshot: budget template in Excel with account, description and period columns -->
-
 :::tip
 Export first even for a brand-new budget. The export gives you a template with the exact layout the
 import expects. Building the file from scratch is the most common reason an import fails.

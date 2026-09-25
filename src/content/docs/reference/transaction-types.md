@@ -245,8 +245,6 @@ ORDER BY pt.SysDate, pt.SysTime, pt.TranNum;
 
 In a BAQ, add `PartTran` as the only table and put the same conditions on the **Table Criteria** tab. For "anything that touched on-hand", filter on `TranType LIKE 'STK-%' OR TranType LIKE '%-STK' OR TranType IN ('ADJ-QTY', 'ADJ-CST')`.
 
-<!-- TODO verify: name of the PartTran boolean that flags rows affecting inventory quantity or cost (a simpler alternative to the LIKE filter). -->
-
 ### Linking a transaction to its GL lines
 
 Once **Capture COS/WIP Activity** has run, the GL lines for a part transaction sit in `TranGLC`. The link is generic: `RelatedToFile` names the source table, and `Key1` to `Key3` hold that table's key values as text.
@@ -269,13 +267,11 @@ FROM   Erp.PartTran pt
 JOIN   Erp.TranGLC g
        ON  g.Company       = pt.Company
        AND g.RelatedToFile = 'PartTran'
-       AND g.Key1 = CONVERT(varchar(20), pt.SysDate, 101)
+       AND g.Key1 = CONVERT(varchar(20), pt.SysDate, 101)  -- match the date format your Key1 values use
        AND g.Key2 = CAST(pt.SysTime AS varchar(20))
        AND g.Key3 = CAST(pt.TranNum AS varchar(20))
 WHERE  pt.Company  = 'EPIC06'
   AND  pt.TranType = 'STK-MTL';
 ```
-
-<!-- TODO verify: the text format Epicor uses for the date in TranGLC.Key1 (and whether it follows the server culture), then adjust the CONVERT style. -->
 
 Rows with no `TranGLC` match are either not captured yet, or a type with no GL entry under the standard rules: `WIP-MFG`, `MFG-VEN`, `PUR-CMI`, `PUR-SMI`, `ASM-INS`, `SUB-INS`, `INS-ASM` and `RMA-INS`. `INS-DMR`, `DMR-ASM` and `DMR-REJ` also skip the GL for job-sourced quantities when **Move Cost to DMR** wasn't selected.

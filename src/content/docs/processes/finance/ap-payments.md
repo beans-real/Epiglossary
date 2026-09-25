@@ -86,7 +86,9 @@ standard interface program, change which field from its data it writes to that p
 copy as a new electronic interface, and point the payment method at it. Keep the change small: every
 field is fixed-width, and the bank will reject a file whose record lengths drift.
 
-<!-- TODO verify: the menu path to Electronic Interface Maintenance in Kinetic and whether custom EI programs are allowed in Epicor Cloud (multi-tenant). -->
+:::note
+Epicor Cloud (multi-tenant) may not allow custom electronic interface programs. Check with Epicor before planning this change on a cloud tenant.
+:::
 
 ## Related pages
 

@@ -53,8 +53,6 @@ cost of multi-company setup for anything they share.
     configured parts work in the new site.
 13. **Custom logic**: search BPMs, functions, BAQs and reports for hard-coded site IDs and update them.
 
-<!-- TODO verify: the Site Configuration option that moves an existing warehouse, with its quantities and costs, to another site (reported under Modules > Inventory, "transfer resources") -->
-
 ## Replace MfgSys in a new company
 
 Every new company is created with a default site called `MfgSys`. Nothing requires you to keep it.

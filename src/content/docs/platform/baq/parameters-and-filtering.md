@@ -44,8 +44,6 @@ The **specified table field value** option is how you filter one table by anothe
 2. On `ResourceTimeUsed`, add two criteria: `LoadDate >= ` **specified table field value** `JobOper.StartDate`, and `LoadDate <= ` **specified table field value** `JobOper.DueDate`.
 3. On `JobOper`, add `OpComplete = False`.
 
-<!-- TODO verify: the ResourceTimeUsed column names for the load date and hours, and the full set of join fields to JobOper -->
-
 ## Where criteria end up
 
 The designer puts criteria in different parts of the SQL depending on which table they're on:
@@ -83,8 +81,6 @@ A parameter is a named value the BAQ asks for when it runs. Dashboards, reports,
 5. Use it: add a criterion whose **Filter Value** is **specified parameter**, and pick the parameter.
 
 In the generated SQL the parameter appears as `@PartNum`, and Epicor substitutes the value when the query runs.
-
-<!-- TODO verify: the Classic menu label for Query Parameters (Actions > Define Parameters) -->
 
 ### Rules and gotchas
 

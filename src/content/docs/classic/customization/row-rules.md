@@ -16,14 +16,13 @@ A **row rule** watches a data view column and applies a setting to controls when
 1. In the Customization Tools Dialog, open **Wizards > Rule Wizard**.
 2. Pick the **data view** and click **New Rule**.
 3. Set the condition: a column, an operator, and either a value or another column to compare with.
-4. Add one or more **actions**: a **SettingStyle** (such as `OK`, `Warning`, `Error`, `Highlight` or `ReadOnly`) and the column or controls it applies to. <!-- TODO verify: full list of SettingStyle values offered by the Rule Wizard -->
+4. Add one or more **actions**: a **SettingStyle** (such as `OK`, `Warning`, `Error`, `Highlight` or `ReadOnly`) and the column or controls it applies to.
 5. Save the customization. The rule appears under **Custom Row Rules** in the tree view, where you can edit it later.
 
 Example: on sales order lines, show the part number as a warning whenever the discount is over five percent.
 
 For conditions a single comparison can't express, the wizard can generate a **custom condition** or **custom action**: stubs in the Script Editor where you return true/false or apply settings in code.
 
-<!-- TODO screenshot: Rule Wizard with a condition comparing two columns and a Warning action -->
 
 ## Coded row rules
 

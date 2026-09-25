@@ -23,7 +23,7 @@ company ID won't match a system-wide menu.
 required, and leave it **empty** for system-wide menus. Only fill it for menus that really belong to a
 company.
 
-<!-- TODO verify: the source note says MenuID must be present even if empty; this page assumes it meant the Company column, since MenuID is the menu's key -->
+<!-- TODO: source note said MenuID must be present even if empty; confirm it meant the Company column -->
 
 ## Child rows fail because a parent is missing
 

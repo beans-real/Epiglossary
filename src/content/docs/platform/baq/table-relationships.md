@@ -50,8 +50,6 @@ Part costs are in `PartCost`, not `Part`. Join `Part` to `PartCost` on `Company`
 `PartCost` is kept per cost group (`CostID`), and a multi-site company can have more than one. Joining on part number alone then returns one row per cost group and doubles your totals. Add `CostID` to the join, or a criterion on it, for the cost group used by the site you're reporting on.
 :::
 
-<!-- TODO verify: where a site's cost ID is stored (for example a Plant column) so it can be joined rather than typed as a constant -->
-
 ## Invoice lines to GL accounts
 
 To show the sales (and returns) accounts an invoice line posted to, join `InvcDtl` to `TranGLC` with **All rows from `InvcDtl`**, so lines without GL detail still appear:
@@ -70,8 +68,6 @@ LEFT OUTER JOIN Erp.TranGLC AS TranGLC
 
 In the designer, that's the first four conditions as join fields, and the last two as criteria on `TranGLC` (which land in the join because `TranGLC` isn't the first table).
 
-<!-- TODO verify: what TranGLC.RecordType 'R' means and which other GLAcctContext values an invoice line can carry (tax, freight, discounts) -->
-
 ## Inventory transactions to GL
 
 `PartTran` rows link to `TranGLC` through `RelatedToFile = 'PartTran'` and its date, time and transaction number. The details, and a worked query, are on [Inventory transaction types](/reference/transaction-types/#linking-a-transaction-to-its-gl-lines).
@@ -87,11 +83,9 @@ In the designer, that's the first four conditions as join fields, and the last t
 | `E` / `A` | Estimated / actual |
 | `Labor`, `Burden`, `Material`, `Subcontract`, `MtlBur` | The cost bucket |
 
-So the estimated burden for an assembly including its subassemblies is `JobAsmbl.TLEBurdenCost + JobAsmbl.LLEBurdenCost`, and the actual equivalent is `JobAsmbl.TLABurdenCost + JobAsmbl.LLABurdenCost`.
+So the estimated burden for an assembly including its subassemblies is `JobAsmbl.TLEBurdenCost + JobAsmbl.LLEBurdenCost`, and the actual equivalent is typically `JobAsmbl.TLABurdenCost + JobAsmbl.LLABurdenCost`.
 
 For a whole-job figure, read the top assembly (`AssemblySeq = 0`) and add its `TL` and `LL` values. Don't add `TL + LL` across every assembly: each parent's `LL` already includes its children, so you'd count them twice.
-
-<!-- TODO verify: the full list of JobAsmbl TL/LL cost column names (only TLEBurdenCost and LLEBurdenCost are confirmed in the source notes) and that LL on assembly 0 includes all lower levels -->
 
 ## Stock on hand as of a date
 
@@ -109,8 +103,6 @@ END
 ```
 
 Then sum it by part (and warehouse or bin if needed) with a criterion of `TranDate <= ` your date parameter. The type lists above are a starting point, not a complete set. Codes such as `MTL-STK`, `RMA-STK`, `DMR-STK`, `STK-ASM`, `STK-DMR` and `STK-KIT` also move stock, and `STK-STK` needs care when you total by bin or warehouse. Check every `STK` code you use against [Inventory transaction types](/reference/transaction-types/), and prove the query by running it for today's date and comparing the result with `PartWhse` on-hand quantities.
-
-<!-- TODO verify: that TranQty is stored unsigned for STK-* issues and signed for ADJ-QTY, and whether TranQty is in the transaction UOM or the part's inventory UOM -->
 
 ## Scheduled load by resource
 

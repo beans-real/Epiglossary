@@ -22,8 +22,6 @@ is usually owned by a different person, and each leaves records the next step de
 | 6. Invoice | Accounts payable | AP Invoice Entry (matched to receipts) | `APInvHed`, `APInvDtl` |
 | 7. Pay | Accounts payable | AP Payment Entry | `CheckHed`, `APTran` |
 
-<!-- TODO verify: table names for PO suggestions (SugPoDtl) and AP payments (CheckHed). -->
-
 ## Pages in this section
 
 - [Buyers and suppliers](/processes/purchasing/buyers-and-suppliers/): buyer limits and approvers,

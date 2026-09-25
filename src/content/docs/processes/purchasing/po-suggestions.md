@@ -43,8 +43,6 @@ do.
 
 Only one Generate Suggestions run can happen at a time, so don't schedule it to overlap MRP.
 
-<!-- TODO screenshot: Generate Suggestions with the settings above -->
-
 Run scheduled tasks under a dedicated service user rather than a person's login, so they keep running
 when people leave or change passwords.
 

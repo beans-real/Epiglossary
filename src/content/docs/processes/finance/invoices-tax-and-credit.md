@@ -29,8 +29,6 @@ document.
    liability). If no exempt liability exists, remove the tax lines instead.
 4. Post the new invoice and, if needed, apply the reversal and the new invoice against each other.
 
-<!-- TODO verify: whether Kinetic AP Invoice Entry offers a cancellation invoice for posted AP invoices, or only debit memos. -->
-
 **Prevention:** set the tax liability and exemptions on the customer, supplier and ship-to records, so
 new invoices default correctly.
 
@@ -39,8 +37,6 @@ new invoices default correctly.
 Advance billing lets you invoice a customer part of an order before it ships. Whether tax is charged on
 that advance is controlled by a setting; when it's on, invoices can apply tax to advance billing lines
 rather than waiting for the shipment invoice.
-
-<!-- TODO verify: where the advance billing tax setting lives (company, tax or AR configuration) and its exact label. -->
 
 ## Customer credit totals
 

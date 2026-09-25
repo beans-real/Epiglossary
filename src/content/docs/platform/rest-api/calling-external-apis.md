@@ -86,7 +86,10 @@ Notes on the code:
   [Call business objects from a function](/platform/functions/calling-business-objects/), so the data
   is validated like a user's entry.
 
-<!-- TODO verify: whether System.Net.Http must be added under the library's References > Assemblies, and any outbound-call restrictions on Epicor-hosted environments -->
+:::note
+Whether `System.Net.Http` has to be added under the library's references, and whether outbound calls
+are restricted, can differ between releases and between on-premises and Epicor-hosted environments.
+:::
 
 ### Secrets
 

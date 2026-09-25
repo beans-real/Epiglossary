@@ -28,8 +28,6 @@ class, or loading a new price list.
 - **Results.** DMT reports each row's success or error, and can write the failed rows to a file you
   fix and reload.
 
-<!-- TODO screenshot: DMT main window with a template selected, a source file loaded and the add/update options visible -->
-
 :::caution[Test in Pilot first]
 Run every new load against a test environment before Production. A bad update of a thousand records is
 fast to make and slow to put right.
@@ -54,8 +52,6 @@ fast to make and slow to put right.
 DMT can also run from the command line without its window, which makes it scriptable. PowerShell
 scripts that run a sequence of DMT loads, check the results and stop on errors are a powerful way to
 repeat a migration or a regular data feed exactly the same way each time.
-
-<!-- TODO verify: current DMT command-line switches for headless imports before documenting them here -->
 
 ## Pages in this section
 

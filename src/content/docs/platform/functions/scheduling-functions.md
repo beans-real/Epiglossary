@@ -30,9 +30,6 @@ directive that "happens to fire often enough".
 5. Pick the **Schedule** and tick **Recurring**.
 6. Click **Submit**.
 
-<!-- TODO verify: the Kinetic menu location of Schedule Epicor Function -->
-<!-- TODO screenshot: Schedule Epicor Function with a library, function, parameter value and a recurring schedule selected -->
-
 ## Checking that it ran
 
 Each run appears in **System Monitor** as a **Run Epicor Function** task. **History Tasks** shows

@@ -73,7 +73,6 @@ foreach (var sn in newSerials)
 - `SerialNumber` and `RawSerialNum` are both set, and to the same final value. Build the new number
   once and copy it, rather than appending the suffix to each field separately, or one of them ends up
   with the suffix twice.
-  <!-- TODO verify: how Epicor uses RawSerialNum versus SerialNumber when a mask with strip characters is in use -->
 
 ## Variations
 

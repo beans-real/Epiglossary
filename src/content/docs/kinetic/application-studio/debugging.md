@@ -84,8 +84,6 @@ Use it to:
 - copy the exact parameter names a method expects before configuring `rest-erp`
 - read the real error message when a save or function call fails. Failed calls are shown in red
 
-<!-- TODO screenshot: Network tab filtered to Fetch/XHR, with a POST to a BO method selected and the Response tab open -->
-
 ## Debugging before the form loads
 
 **Ctrl+Alt+8** only works once the screen has loaded, so you can't use it to watch problems that happen *during* load. The fix is an event that switches debug mode on as the form initializes:

@@ -85,7 +85,7 @@ nonconformance or inspection can't be edited or deleted. The passed parts are no
   report, enter a zero-quantity AP invoice line against the receipt, which closes it without affecting
   the GL, then remove the stock with a quantity adjustment.
 
-<!-- TODO verify: that a zero-quantity AP invoice line against the receipt has no GL effect in current versions. -->
+<!-- TODO: confirm a zero-quantity AP invoice line against a receipt really posts nothing to the GL -->
 
 ## Related pages
 

@@ -75,8 +75,6 @@ On the help page you can:
   **Epicor Functions**
 - run a call and copy its request URL, body and a `curl` version
 
-<!-- TODO screenshot: the Kinetic REST help page with a service selected and a method expanded, showing Try it out -->
-
 ## OData or methods?
 
 Business objects can be reached two ways:

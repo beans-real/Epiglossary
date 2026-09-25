@@ -69,8 +69,6 @@ production can exhaust the year's periods, after which you can't create new cycl
 Rehearse in a test copy of the database.
 :::
 
-<!-- TODO verify: whether one ad-hoc period can carry several single-part schedules, to avoid using up period numbers. -->
-
 In recent versions the part selection screen is labelled **Cycle Count Part / PCID Selection Update**.
 
 ## Fixing a fractional quantity in a whole-number UOM

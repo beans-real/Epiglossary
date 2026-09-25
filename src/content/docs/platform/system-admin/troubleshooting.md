@@ -80,7 +80,7 @@ when the task agent is not actually still running it. This is outside what Epico
 on-premises last resort.
 :::
 
-<!-- TODO verify: Ice.SysTask column names TaskDescription, StartedOn and the 'Active' status value -->
+<!-- TODO: confirm Ice.SysTask column names and status values ('Active', 'Complete') before anyone runs this UPDATE/DELETE -->
 
 ## Database and data model
 
@@ -107,8 +107,6 @@ against the database.
 Support will run it. On-premises, ask Support for the script and instructions and have your database
 administrator run it.
 
-<!-- TODO verify: where the ZFW_Part_GetByID.sql script ships and whether it is run manually or as part of a conversion -->
-
 ## Performance and locking
 
 ### Processes hang or lock up when a BPM fails
@@ -122,8 +120,6 @@ written, and that can lock up the rest of the process.
 
 **Fix:** as a workaround, disable the BPM tracking activity type in **Activity Type Maintenance**, then
 fix the failing BPM. Turn tracking back on later if you need it.
-
-<!-- TODO verify: the ID and exact name of the BPM tracking activity type (reported as record 1) -->
 
 ## Solution Workbench
 

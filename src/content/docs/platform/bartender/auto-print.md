@@ -19,9 +19,8 @@ label-specific parts.
 1. Create a **Standard** data directive on the `ShipHead` table. Standard means the label is only
    produced once the save has been committed.
 2. Add a **Condition**: the `ShipStatus` field of the changed row *has been changed from any to*
-   the closed status (`CLOSED` in the source setup). Testing for the change, not the state, stops a
-   reprint every time someone edits the closed pack.
-   <!-- TODO verify: the ShipHead.ShipStatus value set when a pack is closed or shipped in current releases -->
+   the closed status (`CLOSED` in the source setup; check the value your release uses). Testing for the
+   change, not the state, stops a reprint every time someone edits the closed pack.
 3. On True, add **Auto Print** and choose the report:
    - **Report:** `GenShip` (Generic Shipping), with **Report Type** set to **Bartender Labels**.
    - **Style:** your BarTender style for this label.
@@ -36,8 +35,6 @@ label-specific parts.
    row. Leave the other parameters at their defaults.
 6. Enable the directive and close a test pack. A `.bt` file should appear in the style's output folder
    within a few seconds.
-
-<!-- TODO screenshot: Auto Print widget report options for a Bartender Labels style, with a placeholder printer name -->
 
 :::caution[Pilot and test environments]
 A copied database brings its directives with it. If a test environment writes to the same output
@@ -59,13 +56,14 @@ The shape of the pattern:
    UD table such as `UD05`, keyed by the pack number.
 3. Add the UD table to a copy of the report data definition, joined on that key, so its columns appear
    in the `.bt` file.
-   <!-- TODO verify: joining a UD table into a copied GenShip data definition for a Bartender Labels style -->
 4. Clean up old staging rows on a schedule.
 
 The staging write, in a pre-processing directive on the packing slip report's submit method (its
 tableset carries the `PackingSlipParam` row), so the row exists before the report task starts:
 
-<!-- TODO verify: the exact report service method (for example SubmitToAgent) the packing slip print calls in your release -->
+:::note
+The report service method the packing slip print calls (for example `SubmitToAgent`) can vary by release. Trace the print in your version to find the right method for the directive.
+:::
 
 ```csharp
 int packNum = ds.PackingSlipParam[0].PackNum;

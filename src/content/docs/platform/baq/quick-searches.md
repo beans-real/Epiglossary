@@ -103,5 +103,3 @@ A lighter alternative is a **BAQ search**. In the BAQ designer, open **BAQ Searc
 - **Picking a row puts the wrong value in the field.** The **Return Column** is wrong, or the BAQ returns a different column than you think under that alias.
 - **The Classic toolbar binoculars search** isn't a place quick searches can be added; build them on a field's search instead.
 
-<!-- TODO verify: the Classic binoculars limitation still applies on current versions -->
-<!-- TODO screenshot: Quick Search Maintenance detail with BAQ, Return Column, Context Key (Like), Called From and the option check boxes -->

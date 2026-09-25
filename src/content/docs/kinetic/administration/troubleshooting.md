@@ -77,8 +77,6 @@ compatibility report missed it.
 culprit), and publish it again. Don't rely on the compatibility report to clear your code; compile every
 library yourself after Pilot moves.
 
-<!-- TODO verify: whether Epicor automatically disables libraries that fail to compile after the migration, and the exact meaning of ECF1002 -->
-
 ### SSRS reports fail with a path length error, or can't be copied
 
 **Symptom:** a report fails to print or preview, or copying a report style fails with a permissions

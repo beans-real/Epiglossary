@@ -55,8 +55,6 @@ A panel card that isn't ticked stays a normal card on the page. Ticking it moves
 
 A panel card grid also has a **Make Card Stack** button at the top of its properties, which looks like a quicker way to start a stack from an existing grid card.
 
-<!-- TODO verify: what Make Card Stack does exactly (wraps the selected card in a new panel card stack?) -->
-
 ## One tab per grid on a dashboard
 
 For a dashboard with several grids, separate **TabPage** pages plus a tab component on the parent page give a cleaner result than stacking grids in one card.
@@ -71,9 +69,6 @@ For a dashboard with several grids, separate **TabPage** pages plus a tab compon
 5. Save and preview.
 
 Keep each TabPage's **Name**, its **Tab Id** and the tab's **Title** consistent. Mismatches are a common reason a tab shows up blank.
-
-<!-- TODO verify: whether Name / Tab Id / Title must match exactly for dashboard TabPages, or only for tabs added to an application's main tab strip -->
-<!-- TODO screenshot: Application Map with two TabPages under a dashboard's main page, and the Tab component's data list showing Id, Title and Page for each -->
 
 ## Slide-out panels
 

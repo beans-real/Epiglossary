@@ -78,7 +78,7 @@ to work until the data grows. Check the order against the method signature in th
 
 ### Example: complete every open task on a quote
 
-This function marks a quote's CRM tasks complete with a reason and conclusion.
+This function marks a quote's CRM tasks complete with a reason and conclusion. It assumes the task's quote link is in `TaskQuoteNum`; check the column in your version before running it.
 
 - Request: `quoteNum` (`System.Int32`), `reasonCode` (`System.String`), `conclusion` (`System.String`)
 - References: the Task service
@@ -105,8 +105,6 @@ this.CallService<Erp.Contracts.TaskSvcContract>(taskSvc =>
         taskSvc.Update(ref ds);
 });
 ```
-
-<!-- TODO verify: that TaskQuoteNum is the Task column linking a task to its quote on current releases (the alternative is RelatedToFile = 'QuoteHed' with the quote number in a key field) -->
 
 If you do page through a large set, don't filter on the field you're changing (`Complete = false`
 above) and then request page 2: every update shrinks the result set and rows get skipped. Either

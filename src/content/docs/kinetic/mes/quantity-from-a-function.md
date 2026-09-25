@@ -124,7 +124,9 @@ if (startedHere)
 }
 ```
 
-<!-- TODO verify: GetNewReportQty(empID, laborHedSeq, laborDtlSeq), ReportQuantity(laborHedSeq, laborDtlSeq, out msg, ref ts) and EndActivity(ref ts) signatures against your release's service contracts -->
+:::note
+The signatures of `GetNewReportQty`, `ReportQuantity` and `EndActivity` can vary by release. Check them against your version's Labor service contract.
+:::
 
 ## How it works, and the traps
 

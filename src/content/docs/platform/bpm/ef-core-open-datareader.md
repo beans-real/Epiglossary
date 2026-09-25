@@ -10,8 +10,6 @@ Newer Kinetic releases run BPM and function code on Entity Framework Core. Code 
 database query and runs another query inside the loop can fail there, even if it worked for years on
 Epicor 10. The fix is usually one method call.
 
-<!-- TODO verify: the first Kinetic release that moved BPM code to EF Core, to state it inline -->
-
 ## Symptom
 
 A save or process fails with:

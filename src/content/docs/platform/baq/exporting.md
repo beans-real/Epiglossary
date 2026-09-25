@@ -26,8 +26,6 @@ Put the BAQ in a dashboard and deploy it to a menu. Users right-click the grid a
 
 See [Build a dashboard step by step](/kinetic/application-studio/dashboards/) for the Kinetic side.
 
-<!-- TODO screenshot: Kinetic dashboard grid showing the export/copy to Excel option -->
-
 ## BAQ Report with Excel output
 
 Build a BAQ Report on the query and give its report layout a single table with a column for each BAQ field. When users run it, they choose an Excel format under **Output Format**. The data-only Excel formats give a clean sheet without report headers.
@@ -45,8 +43,6 @@ This suits reports that need options and filters on a form, a menu entry, or sch
 5. Choose a **Schedule**. Pick a schedule other than **Now** and tick **Recurring** to refresh the file automatically.
 
 If you can't reach the server's file system (cloud, for example), fetch the file with **Server File Download** under **System Management > Schedule Processes**.
-
-<!-- TODO screenshot: Business Activity Query Export Process with Query ID, Output Format CSV, Output Filename, Text Delimiter, Output Labels and Schedule -->
 
 :::note
 **Export BAQ** in the designer exports the *query definition*, for moving the BAQ to another company or environment. It doesn't export data.
@@ -69,10 +65,8 @@ Every BAQ a user can run is available through Epicor's REST API as an OData feed
 BAQ parameters can be added to the URL as query string values (`?PartNum=PART-1001`), and OData options such as `$select` and `$filter` trim what comes back.
 
 :::caution
-REST v2 normally requires an API key on every request, and Excel's OData connector has no way to send one. Epicor's documentation says to turn off the v2 API key requirement on the server (the `EnforceApiKeyForRestApiV2` setting) for this to work, which is a security decision for your administrator. The v1 URL form (`/api/v1/BaqSvc/XX_OpenOrders/`) is the other common route.
+REST v2 normally requires an API key on every request, and Excel's OData connector has no way to send one. Epicor's documentation says to turn off the v2 API key requirement on the server (the `EnforceApiKeyForRestApiV2` setting) for this to work, which is a security decision for your administrator. The v1 URL form (`/api/v1/BaqSvc/XX_OpenOrders/`) is the other common route. Whether either works on Epicor cloud, and without extra setup, can vary by release and hosting.
 :::
-
-<!-- TODO verify: whether REST v1 BaqSvc feeds work in current Excel versions without extra configuration, and whether Epicor cloud allows the v2 API key requirement to be disabled -->
 
 The connection runs as the user who signed in, with their security. Anyone you share the workbook with needs their own Epicor login to refresh it.
 

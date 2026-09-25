@@ -34,8 +34,6 @@ Then, in its action text:
    - response parameters to a directive variable of the same type, or to **[ignore]** if you don't
      need them
 
-<!-- TODO screenshot: BPM designer with an Invoke Function widget and its Setup Function Parameters dialog -->
-
 This keeps the directive readable: the flowchart shows *that* the work happens, and the function
 contains *how*.
 
@@ -43,7 +41,11 @@ contains *how*.
 
 Custom code in a directive can call a function with the `this.InvokeFunction` helper, passing the
 library ID, the function ID and the request parameters, and getting the response parameters back.
-<!-- TODO verify: the exact InvokeFunction signature and return type on current releases (Tuple-based arguments vs a params object array), with a short working example -->
+
+:::note
+The `InvokeFunction` signature and return type vary between Kinetic releases. Check the helper's
+parameters in the code editor on your version.
+:::
 
 If you only need to call one function, the widget is simpler and less likely to break on upgrade.
 

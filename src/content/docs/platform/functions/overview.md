@@ -67,7 +67,6 @@ orchestration that non-developers need to read.
 Functions are maintained in **Epicor Functions Maintenance**. In older releases and in the Classic
 client it's at **System Management > Business Process Management > Epicor Functions Maintenance**. In
 recent Kinetic releases, Epicor documents it as part of the **Kinetic Power Tools** client.
-<!-- TODO verify: which Kinetic release moved Epicor Functions Maintenance into Kinetic Power Tools, and whether it is still reachable from the browser menu -->
 
 Your user account needs one of the Functions security groups before the program is usable. See
 [Libraries, publishing and security](/platform/functions/libraries-and-security/#security-groups).

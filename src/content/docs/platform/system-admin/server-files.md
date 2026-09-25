@@ -22,8 +22,6 @@ Epicor writes most of its working files under a **server data directory** (on-pr
 | Report data (XML) for printed reports | the server data directory's reports folder |
 | Electronic Interface (EI) files | `C:\inetpub\wwwroot\<EpicorAppServer>\Server\Erp\EI\` on the application server |
 
-<!-- TODO verify: the company-level and report data folder locations under the server data directory -->
-
 In Epicor Cloud the same logical folders exist, but the paths are different, and on Linux-based cloud
 environments Windows paths don't work at all. See
 [File shares and Linux paths in Epicor Cloud](/kinetic/administration/cloud-file-paths/).

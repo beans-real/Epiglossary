@@ -35,15 +35,13 @@ component materials by backflush, so they can drive on-hand negative even when t
 Blocking these transactions wouldn't help anyway: the labor or receipt has already happened on the
 floor. The better question is *why* the backflush went negative. Nearly always it's one of:
 
-- **The wrong bin.** Backflush takes material from the backflush warehouse and bin of the resource or
+- **The wrong bin.** Backflush typically takes material from the backflush warehouse and bin of the resource or
   resource group on the material's related operation, or from the part's primary warehouse and bin if
   none is set. If the stock actually lives elsewhere, the backflush bin goes negative while the real bin
   stays full. Point the resource's **Backflush Warehouse**/**Backflush Bin** (or the part's primary bin)
   at where the material really is.
 - **Timing.** The receipt or transfer that should have filled the bin hasn't been entered yet.
 - **Unrecorded substitutions or scrap.** The floor used something other than what the method says.
-
-<!-- TODO verify: the full backflush location hierarchy (resource, resource group, part primary warehouse/bin) and its order. -->
 
 If you do need automation, trace a Kanban receipt to find the method that performs the backflush and
 use a BPM to pick a bin with enough stock before the issue is written. See

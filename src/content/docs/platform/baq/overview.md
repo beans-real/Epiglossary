@@ -48,9 +48,6 @@ A BAQ zone links a query to a field so that users can see related data without l
 - In **Kinetic**, add the zone to the field in **Extended Property Maintenance**. Users open it from the field's right-click context menu under **More Info**.
 - In **Classic**, you can link the zone through **Extended Property Maintenance**, **Context Menu Maintenance** or a customization. Linked fields show a small arrow indicator in run mode.
 
-<!-- TODO verify: the exact Extended Property Maintenance setting used to attach a zone BAQ in Kinetic -->
-<!-- TODO screenshot: Kinetic field context menu showing More Info with a zone BAQ -->
-
 ## Pages in this section
 
 1. [Designing queries](/platform/baq/designing-queries/): tables and joins, table order, subquery types, CTEs and their load order, unions and sorting.

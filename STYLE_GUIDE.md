@@ -86,12 +86,18 @@ Page types and their usual sections:
   and reference them root-relative: `![Provider Model with a BAQ where clause](/images/where-clause.png)`.
   Alt text says what the image shows. Before adding one, check it doesn't show personal data (names,
   emails) or anything identifying a company.
-- Where a screenshot would help but none exists, leave `<!-- TODO screenshot: what it should show -->`.
+- Where no screenshot exists, describe the screen in words; don't leave screenshot placeholders.
 - Don't pad. If a topic is one tip, fold it into a related page instead of making a stub page.
 
 ## 6. Accuracy
 
 - Don't state anything you can't back up from the source material or well-established Epicor behavior.
 - Don't invent business-object methods, table fields or menu paths. If the source doesn't make it clear,
-  leave it out or mark it `<!-- TODO verify: ... -->`.
+  leave it out or phrase it as an example ("for example", "typically") rather than a rule.
+- Examples are outlines, not sources of truth. Much of Epicor is esoteric and version-specific, so write
+  examples that show the shape of a solution and let readers adapt the details.
+- When something may differ between Epicor 10 and Kinetic, or between releases, say so in a visible
+  `:::note` instead of leaving a hidden TODO.
+- Reserve `<!-- TODO verify: ... -->` for claims where being wrong could cause harm (direct database
+  changes, security, data loss) or where the page's central claim is in doubt. Keep the site under 20.
 - Fix errors found in source material rather than carrying them over.

@@ -98,8 +98,6 @@ The **SubQuery List** is a sequence, and the SQL is built from it top to bottom.
 
 The fix is always the same: open the **SubQuery List** and use the arrows to reorder it so that every CTE sits below the CTEs it depends on, with its union members immediately below it. If you're pivoting a CTE, put that CTE first.
 
-<!-- TODO verify: the exact error text shown when a CTE is referenced before it is defined -->
-
 ### Recursive queries
 
 A recursive CTE is how a BAQ walks a hierarchy of unknown depth: a multi-level bill of materials, a chain of parent and child records, or a list that needs splitting into one row per item. In the designer it's two subqueries:

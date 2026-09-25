@@ -21,7 +21,7 @@ pattern; the version here is written to be safe with several users saving at onc
 
 Create the counter as a user code:
 
-1. Open **User Codes Maintenance**. <!-- TODO verify: menu path for User Codes Maintenance in Kinetic and Classic -->
+1. Open **User Codes Maintenance**.
 2. Add a code type `NEXTNUM`.
 3. Under it, add a code `CUSTOMER` and put the first number to issue (for example `100001`) in its
    description.
