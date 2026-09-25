@@ -1,0 +1,19 @@
+---
+import Default from '@astrojs/starlight/components/PageTitle.astro';
+import EnvBadge from './EnvBadge.astro';
+
+const { env } = Astro.locals.starlightRoute.entry.data;
+---
+
+<Default />
+{env && (
+	<div class="page-meta">
+		<EnvBadge env={env} />
+	</div>
+)}
+
+<style>
+	.page-meta {
+		margin-top: 0.5rem;
+	}
+</style>

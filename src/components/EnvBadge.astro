@@ -1,0 +1,35 @@
+---
+interface Props {
+	env: 'kinetic' | 'classic' | 'both';
+}
+
+const labels = {
+	kinetic: 'Kinetic',
+	classic: 'Classic (E10)',
+	both: 'Kinetic + Classic',
+};
+const { env } = Astro.props;
+---
+
+<span class={`env-badge env-${env}`} title={`Applies to: ${labels[env]}`}>{labels[env]}</span>
+
+<style>
+	.env-badge {
+		display: inline-block;
+		padding: 0.15rem 0.6rem;
+		border-radius: 999px;
+		font-size: var(--sl-text-xs);
+		font-weight: 600;
+		letter-spacing: 0.02em;
+		border: 1px solid currentColor;
+	}
+	.env-kinetic {
+		color: var(--eg-kinetic);
+	}
+	.env-classic {
+		color: var(--eg-classic);
+	}
+	.env-both {
+		color: var(--eg-both);
+	}
+</style>

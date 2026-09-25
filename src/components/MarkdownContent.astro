@@ -1,0 +1,35 @@
+---
+import Default from '@astrojs/starlight/components/MarkdownContent.astro';
+
+// Starlight's built-in 404 entry doesn't go through our schema, so `sources` can be missing.
+const sources = Astro.locals.starlightRoute.entry.data.sources ?? [];
+---
+
+<Default>
+	<slot />
+	{sources.length > 0 && (
+		<section class="sources">
+			<h2>Sources</h2>
+			<p>This page is written in our own words. It was informed by:</p>
+			<ul>
+				{sources.map((s) => (
+					<li>
+						<a href={s.url} rel="noopener">{s.title}</a>
+					</li>
+				))}
+			</ul>
+		</section>
+	)}
+</Default>
+
+<style>
+	.sources {
+		margin-top: 3rem;
+		padding-top: 1rem;
+		border-top: 1px solid var(--sl-color-hairline);
+		font-size: var(--sl-text-sm);
+	}
+	.sources h2 {
+		font-size: var(--sl-text-lg);
+	}
+</style>

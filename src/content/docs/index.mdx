@@ -1,0 +1,75 @@
+---
+title: Epiglossary
+description: An unofficial, community-written guide to Epicor Kinetic and Epicor 10.
+template: splash
+hero:
+  tagline: The practical Epicor guide. BPMs, Application Studio, BAQs, reporting and the processes behind them, written by people who build on Epicor every day.
+  actions:
+    - text: Start here
+      link: /Epiglossary/start/about/
+      icon: right-arrow
+    - text: Kinetic or Classic?
+      link: /Epiglossary/start/kinetic-vs-classic/
+      icon: open-book
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+{/* Component hrefs aren't rewritten by the base-link plugin, so they include /Epiglossary explicitly. */}
+
+## Find your way in
+
+### Kinetic
+
+<CardGrid>
+	<LinkCard title="Application Studio" href="/Epiglossary/kinetic/application-studio/overview/" description="Layers, data views, events, data rules, dashboards and debugging." />
+	<LinkCard title="Kinetic administration" href="/Epiglossary/kinetic/administration/overview/" description="Browser client, Edge Agent, Cloud Management Portal and Linux containers." />
+	<LinkCard title="Kinetic MES" href="/Epiglossary/kinetic/mes/overview/" description="MES screen tweaks, End Activity and reporting quantity." />
+</CardGrid>
+
+### Classic (Epicor 10)
+
+<CardGrid>
+	<LinkCard title="Classic customization" href="/Epiglossary/classic/customization/overview/" description="Script Editor, oTrans, EpiDataViews, adapters and row rules." />
+	<LinkCard title="Migrating to Kinetic" href="/Epiglossary/classic/migrating-to-kinetic/" description="Where each Classic technique lives in Kinetic." />
+	<LinkCard title="Classic dashboards" href="/Epiglossary/classic/dashboards/overview/" description="Trackers, BAQ combos, grid totals and Uptake from Excel." />
+	<LinkCard title="Classic MES" href="/Epiglossary/classic/mes/overview/" description="MES menu buttons, barcode scanning and Report Quantity customizations." />
+</CardGrid>
+
+### Platform (both clients)
+
+<CardGrid>
+	<LinkCard title="BPM" href="/Epiglossary/platform/bpm/overview/" description="Method and data directives, conditions, LINQ and common patterns." />
+	<LinkCard title="Epicor Functions" href="/Epiglossary/platform/functions/overview/" description="Libraries, calling BOs and BAQs, scheduling and email." />
+	<LinkCard title="BAQ" href="/Epiglossary/platform/baq/overview/" description="Query design, calculated fields, updatable BAQs and performance." />
+	<LinkCard title="Reporting" href="/Epiglossary/platform/reporting/overview/" description="SSRS, report data definitions, BAQ reports and print routing." />
+	<LinkCard title="REST API" href="/Epiglossary/platform/rest-api/overview/" description="v1 vs v2, API keys, calling Epicor and calling out of it." />
+	<LinkCard title="System admin" href="/Epiglossary/platform/system-admin/overview/" description="Scheduled tasks, email, UD fields, Solution Workbench and sites." />
+	<LinkCard title="DMT" href="/Epiglossary/platform/dmt/overview/" description="Loading data in bulk, and the Excel gotchas that break it." />
+	<LinkCard title="Bartender & labels" href="/Epiglossary/platform/bartender/overview/" description="Integration setup, report styles, templates and auto-print." />
+</CardGrid>
+
+### Processes (both clients)
+
+<CardGrid>
+	<LinkCard title="Jobs & manufacturing" href="/Epiglossary/processes/jobs-manufacturing/overview/" description="The job lifecycle, inventory flow through jobs, costing and WIP." />
+	<LinkCard title="Scheduling" href="/Epiglossary/processes/scheduling/overview/" description="Resources, operation time, send-ahead and scheduling blocks." />
+	<LinkCard title="Inventory" href="/Epiglossary/processes/inventory/overview/" description="Transactions, reconciliation, cycle counts and negative on-hand." />
+	<LinkCard title="Purchasing" href="/Epiglossary/processes/purchasing/overview/" description="Buyers, suppliers, PO suggestions and PO dates." />
+	<LinkCard title="Sales & shipping" href="/Epiglossary/processes/sales-shipping/overview/" description="Order to shipment, freight errors and customer part data." />
+	<LinkCard title="Finance" href="/Epiglossary/processes/finance/overview/" description="AP payments, GL budgets, tax and credit." />
+	<LinkCard title="Quality & RMA" href="/Epiglossary/processes/quality-rma/overview/" description="Nonconformance, inspection and returns." />
+	<LinkCard title="Serial numbers" href="/Epiglossary/processes/serial-numbers/overview/" description="Tracking logic, masks, matching and fixes." />
+</CardGrid>
+
+### Reference
+
+<CardGrid>
+	<LinkCard title="Inventory transaction types" href="/Epiglossary/reference/transaction-types/" description="What every PartTran.TranType code means." />
+	<LinkCard title="Tools and links" href="/Epiglossary/reference/tools-and-links/" description="Community resources and tools worth knowing." />
+</CardGrid>
+
+:::note
+Epiglossary is an independent community project. It is not affiliated with, endorsed by, or supported by Epicor Software Corporation. "Epicor" and "Kinetic" are trademarks of their respective owner.
+:::
